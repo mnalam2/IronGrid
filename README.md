@@ -6,17 +6,22 @@ infrastructure work, staff augmentation, and technical consulting.
 
 ## Stack
 
-Plain static HTML + CSS. No build step, no frameworks, no dependencies.
+Plain static HTML + CSS + vanilla JS. No build step, no frameworks, no
+dependencies (Google Fonts is the only external resource).
 
 ```
-index.html                # Single-page site (hero, services, approach, about, contact)
-css/styles.css            # All styling (system fonts, dark industrial theme)
+index.html                # Single-page site (hero, services, approach, models, principles, FAQ, contact)
+css/styles.css            # All styling (dark forge theme, ember accent, grid motif)
+js/main.js                # Interactive hero grid canvas, reveals, nav, FAQ accordion
 assets/logo.png           # Logo, navy on transparent (for light backgrounds)
 assets/logo-white.png     # Logo, white on transparent (used in the dark header)
 assets/favicon.png        # Grid mark on navy chip
 assets/logo-original.png  # Original uploaded logo artwork
 CNAME                     # Custom domain for GitHub Pages
 ```
+
+Animations respect `prefers-reduced-motion`, the hero canvas pauses when
+offscreen, and the layout is responsive down to small phones.
 
 ## Local preview
 

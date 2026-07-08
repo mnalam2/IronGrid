@@ -3,135 +3,389 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IronGrid Technologies LLC — Technology Contracting &amp; Consulting</title>
-  <meta name="description" content="IronGrid Technologies LLC is a technology contracting agency delivering software engineering, cloud infrastructure, and IT consulting services." />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>IronGrid Technologies — Senior Contract Engineering</title>
+  <meta name="description" content="IronGrid Technologies LLC is a technology contracting agency. Senior engineers embed with your team to design, build, and ship production software — cloud, DevOps, custom development, and consulting." />
+  <meta property="og:title" content="IronGrid Technologies — Senior Contract Engineering" />
+  <meta property="og:description" content="A technology contracting agency. Senior engineers who design, build, and ship the systems your business runs on." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://irongridtechnologiesllc.com/" />
+  <meta property="og:image" content="https://irongridtechnologiesllc.com/assets/logo-original.png" />
+  <meta name="theme-color" content="#05080d" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="IronGrid Technologies — home">
         <img class="brand-logo" src="assets/logo-white.png" alt="IronGrid Technologies" />
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#contact">Contact</a>
+        <a href="#models">Engagement</a>
+        <a href="#principles">Principles</a>
+        <a href="#faq">FAQ</a>
       </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="#contact">Start a project</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Technology Contracting &amp; Consulting</p>
-        <h1>Engineering muscle for teams that<br class="desktop-only" /> need to ship.</h1>
-        <p class="lede">
-          IronGrid Technologies is a technology contracting agency. We embed experienced
-          engineers into your projects to design, build, and maintain the systems your
-          business runs on.
+    <!-- ================= Hero ================= -->
+    <section class="hero" id="hero">
+      <canvas id="gridCanvas" aria-hidden="true"></canvas>
+      <div class="hero-fade" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="badge" data-reveal>
+          <span class="badge-dot" aria-hidden="true"></span>
+          Available for new engagements
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Start a conversation</a>
-          <a class="btn btn-ghost" href="#services">See what we do</a>
+        <h1 class="hero-title" data-reveal>
+          We <em>forge</em> the systems<br />
+          your business runs on.
+        </h1>
+        <p class="lede" data-reveal>
+          IronGrid Technologies is a technology contracting agency. Senior engineers
+          embed with your team to design, build, and ship production software —
+          then hand you the keys.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn-primary btn-lg" href="#contact">Start a project
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#services">Explore services</a>
         </div>
+        <dl class="hero-stats" data-reveal>
+          <div><dt>100%</dt><dd>senior engineers</dd></div>
+          <div><dt>&lt;24h</dt><dd>first response</dd></div>
+          <div><dt>1</dt><dd>direct point of contact</dd></div>
+          <div><dt>0</dt><dd>layers of middlemen</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- ================= Marquee ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Software Development</span><i>◆</i>
+        <span>Cloud Architecture</span><i>◆</i>
+        <span>DevOps &amp; CI/CD</span><i>◆</i>
+        <span>Staff Augmentation</span><i>◆</i>
+        <span>Legacy Modernization</span><i>◆</i>
+        <span>Technical Due Diligence</span><i>◆</i>
+        <span>Data Engineering</span><i>◆</i>
+        <span>Platform Engineering</span><i>◆</i>
+        <span>Software Development</span><i>◆</i>
+        <span>Cloud Architecture</span><i>◆</i>
+        <span>DevOps &amp; CI/CD</span><i>◆</i>
+        <span>Staff Augmentation</span><i>◆</i>
+        <span>Legacy Modernization</span><i>◆</i>
+        <span>Technical Due Diligence</span><i>◆</i>
+        <span>Data Engineering</span><i>◆</i>
+        <span>Platform Engineering</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ================= Services ================= -->
     <section id="services" class="section">
       <div class="container">
-        <h2>Services</h2>
-        <p class="section-lede">Practical, senior-level help across the stack — on contract terms that fit your project.</p>
+        <p class="eyebrow" data-reveal><span>01</span> Services</p>
+        <h2 data-reveal>Practical, senior-level help<br />across the stack.</h2>
+        <p class="section-lede" data-reveal>
+          Every engagement is staffed with engineers who have shipped production
+          systems — on contract terms that fit your project.
+        </p>
         <div class="card-grid">
-          <article class="card">
-            <h3>Software Development</h3>
-            <p>Custom web applications, APIs, and internal tools — built to be maintained, not just delivered. Full-stack work across modern languages and frameworks.</p>
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Custom Software Development</h3>
+            <p>Web applications, APIs, and internal tools engineered for the long haul — built to be maintained, not just delivered.</p>
+            <ul class="card-tags"><li>TypeScript</li><li>React</li><li>Node</li><li>Python</li><li>Go</li></ul>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 1 1 .6-7.97 5.5 5.5 0 0 1 10.79 1.42A3.5 3.5 0 0 1 17.5 18Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
             <h3>Cloud &amp; Infrastructure</h3>
-            <p>Cloud architecture, migrations, CI/CD pipelines, and infrastructure-as-code on AWS, Azure, and GCP. We keep environments reproducible and costs visible.</p>
+            <p>Architecture, migrations, and infrastructure-as-code with environments that stay reproducible and costs that stay visible.</p>
+            <ul class="card-tags"><li>AWS</li><li>Azure</li><li>GCP</li><li>Terraform</li></ul>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5-2 2m-7 7-2 2m11 0-2-2m-7-7-2-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <h3>DevOps &amp; Platform Engineering</h3>
+            <p>CI/CD pipelines, containerization, observability, and the paved roads that let your developers ship without fear.</p>
+            <ul class="card-tags"><li>Kubernetes</li><li>Docker</li><li>GitHub Actions</li><li>Grafana</li></ul>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M16 19a4 4 0 0 0-8 0M12 12a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4ZM19 8v4m2-2h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
             <h3>Staff Augmentation</h3>
-            <p>Vetted contract engineers who integrate with your existing team, tooling, and process — from a single specialist to a full delivery pod.</p>
+            <p>Vetted senior contractors who integrate with your team, tooling, and process — from one specialist to a full delivery pod.</p>
+            <ul class="card-tags"><li>Individual</li><li>Pod</li><li>Embedded</li></ul>
           </article>
-          <article class="card">
-            <h3>Technical Consulting</h3>
-            <p>Architecture reviews, technology selection, legacy modernization roadmaps, and due-diligence assessments when you need a clear-eyed second opinion.</p>
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 17.5 9.5 12 4 6.5M12 19h8M12 5h8m-8 7h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Legacy Modernization</h3>
+            <p>Incremental, low-risk migrations off systems that hold you back — strangler-fig rewrites, framework upgrades, database moves.</p>
+            <ul class="card-tags"><li>Assess</li><li>Stabilize</li><li>Migrate</li></ul>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6.5v5c0 4.5 3.2 7.6 7.5 9.5 4.3-1.9 7.5-5 7.5-9.5v-5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Consulting &amp; Due Diligence</h3>
+            <p>Architecture reviews, technology selection, and clear-eyed technical assessments when a decision is too expensive to guess.</p>
+            <ul class="card-tags"><li>Reviews</li><li>Roadmaps</li><li>Audits</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Approach -->
+    <!-- ================= Approach ================= -->
     <section id="approach" class="section section-alt">
       <div class="container">
-        <h2>How we work</h2>
-        <div class="steps">
-          <div class="step">
+        <p class="eyebrow" data-reveal><span>02</span> Approach</p>
+        <h2 data-reveal>The IronGrid method.</h2>
+        <p class="section-lede" data-reveal>
+          Contracting has a reputation problem. We fix it with a process that is
+          boring in the best possible way: predictable, transparent, and documented.
+        </p>
+        <ol class="timeline">
+          <li class="timeline-step" data-reveal>
             <span class="step-num">01</span>
-            <h3>Scope</h3>
-            <p>We start with a short discovery call to understand the problem, the constraints, and what "done" looks like.</p>
-          </div>
-          <div class="step">
+            <div>
+              <h3>Scope</h3>
+              <p>A short discovery call to understand the problem, the constraints, and what &ldquo;done&rdquo; looks like. You get a written proposal with a timeline and a price — not a vague estimate.</p>
+            </div>
+          </li>
+          <li class="timeline-step" data-reveal>
             <span class="step-num">02</span>
-            <h3>Staff</h3>
-            <p>You get a clear proposal: who's on the engagement, the timeline, and transparent contract terms. No bait and switch.</p>
-          </div>
-          <div class="step">
+            <div>
+              <h3>Staff</h3>
+              <p>You meet the actual engineers who will do the work before anything is signed. The people in the proposal are the people in your repos. No bait and switch, ever.</p>
+            </div>
+          </li>
+          <li class="timeline-step" data-reveal>
             <span class="step-num">03</span>
-            <h3>Ship</h3>
-            <p>We work in your repos and your process, with regular demos and honest status reporting until the work is delivered.</p>
+            <div>
+              <h3>Ship</h3>
+              <p>We work in your repositories, your tracker, and your process. Weekly demos of running software and honest status reports — including the parts that aren't going well.</p>
+            </div>
+          </li>
+          <li class="timeline-step" data-reveal>
+            <span class="step-num">04</span>
+            <div>
+              <h3>Support</h3>
+              <p>Every engagement ends with documentation and a real handoff. Your team can run what we built. If you want us to stick around, retainers are available — but never required.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= Engagement models ================= -->
+    <section id="models" class="section">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span>03</span> Engagement models</p>
+        <h2 data-reveal>Three ways to work with us.</h2>
+        <p class="section-lede" data-reveal>
+          Simple contract structures under a standard MSA and SOW. Pick the shape
+          that fits — or tell us what you need and we'll propose one.
+        </p>
+        <div class="model-grid">
+          <article class="model" data-reveal>
+            <h3>Project-Based</h3>
+            <p class="model-tag">Fixed scope · fixed price</p>
+            <p>A defined deliverable with milestones, acceptance criteria, and a price agreed up front. Scope changes are written down and re-priced — no surprise invoices.</p>
+            <ul>
+              <li>Written SOW with milestones</li>
+              <li>Weekly demos of running software</li>
+              <li>Documentation &amp; handoff included</li>
+            </ul>
+            <p class="model-fit">Best for: a well-defined build or migration</p>
+          </article>
+          <article class="model model-featured" data-reveal>
+            <p class="model-flag">Most common</p>
+            <h3>Staff Augmentation</h3>
+            <p class="model-tag">Monthly · per engineer</p>
+            <p>Senior contract engineers embedded in your team on a simple monthly basis. Scale up when the roadmap demands it, scale down when it doesn't.</p>
+            <ul>
+              <li>Vetted seniors, interviewed by you</li>
+              <li>Your repos, your process, your standup</li>
+              <li>30-day flexibility — no long lock-ins</li>
+            </ul>
+            <p class="model-fit">Best for: capacity gaps and deadline crunches</p>
+          </article>
+          <article class="model" data-reveal>
+            <h3>Retained Partnership</h3>
+            <p class="model-tag">Ongoing · advisory + build</p>
+            <p>A standing engineering partner for companies without a full-time technical team — architecture ownership, vendor management, and hands-on development as needed.</p>
+            <ul>
+              <li>Reserved monthly capacity</li>
+              <li>Architecture &amp; roadmap ownership</li>
+              <li>Priority response times</li>
+            </ul>
+            <p class="model-fit">Best for: long-term product evolution</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Principles ================= -->
+    <section id="principles" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span>04</span> Principles</p>
+        <h2 data-reveal>What we refuse to compromise on.</h2>
+        <div class="principle-grid">
+          <div class="principle" data-reveal>
+            <h3>Senior only.</h3>
+            <p>No one learns on your dime. Every engineer on an IronGrid engagement has shipped and operated production systems.</p>
+          </div>
+          <div class="principle" data-reveal>
+            <h3>You own everything.</h3>
+            <p>Code, infrastructure, credentials, and documentation live in <em>your</em> accounts from day one. Walking away from us should always be easy.</p>
+          </div>
+          <div class="principle" data-reveal>
+            <h3>No black boxes.</h3>
+            <p>Weekly demos of running software and status reports that include the bad news. You will never wonder what you're paying for.</p>
+          </div>
+          <div class="principle" data-reveal>
+            <h3>Built to hand off.</h3>
+            <p>Engagements end. Your codebase shouldn't need us forever — we document, we teach, and we leave things better than we found them.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="section">
       <div class="container narrow">
-        <h2>About IronGrid</h2>
-        <p>
-          IronGrid Technologies LLC is an independent technology contracting agency.
-          We believe good contracting is simple: senior people, clear scopes, and
-          work that holds up after the engagement ends. No bloated teams, no
-          billable-hour padding — just dependable engineering.
-        </p>
+        <p class="eyebrow" data-reveal><span>05</span> FAQ</p>
+        <h2 data-reveal>Questions, answered straight.</h2>
+        <div class="faq-list">
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              How quickly can you start?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>Discovery calls happen within a few days of your first email, and most engagements begin within one to three weeks depending on scope and team size. If your need is urgent, say so — we'll tell you honestly whether we can meet the date.</p></div></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              Do you work with existing teams or take on whole projects?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>Both. We can embed engineers in your existing team under your process, or take full ownership of a scoped deliverable and run it end-to-end. Either way you get weekly demos and direct access to the people doing the work.</p></div></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              What technologies do you cover?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>Modern web stacks (TypeScript, React, Node, Python, Go, .NET), the three major clouds (AWS, Azure, GCP), and the infrastructure around them — Terraform, Kubernetes, CI/CD, and observability tooling. If your stack is unusual, ask; if we're not the right fit, we'll say so.</p></div></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              How do you price engagements?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>Project work is fixed-price against a written scope. Staff augmentation is a flat monthly rate per engineer. Retainers reserve monthly capacity at a predictable cost. Every price is in the proposal before you sign — there are no hidden fees and no hourly padding.</p></div></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              Remote or on-site?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>Engagements are remote-first with overlap across US time zones. On-site visits for kickoffs, planning sessions, or critical milestones can be arranged as part of the SOW.</p></div></div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              What do contracts look like?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>A short master services agreement plus a statement of work per engagement. IP assignment to you, confidentiality by default, and 30-day exit terms on ongoing work. We're happy to work from your paper instead if you have a standard vendor agreement.</p></div></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section section-contact">
-      <div class="container narrow center">
-        <h2>Let's build something.</h2>
-        <p class="section-lede">
-          Have a project in mind or need extra engineering capacity?
-          Reach out and we'll get back to you within one business day.
+    <!-- ================= CTA ================= -->
+    <section id="contact" class="section section-cta">
+      <div class="cta-grid-bg" aria-hidden="true"></div>
+      <div class="container center">
+        <h2 class="cta-title" data-reveal>Let's build something<br /><em>that lasts.</em></h2>
+        <p class="section-lede center-lede" data-reveal>
+          Tell us about your project, your deadline, or the gap in your team.
+          We respond to every inquiry within one business day.
         </p>
-        <a class="btn btn-primary btn-lg" href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a>
+        <div data-reveal>
+          <a class="btn btn-primary btn-xl" href="mailto:contact@irongridtechnologiesllc.com">
+            contact@irongridtechnologiesllc.com
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="cta-note">Prefer a call? Email us two times that work and we'll send an invite.</p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- ================= Footer ================= -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year">2026</span> IronGrid Technologies LLC. All rights reserved.</p>
-      <nav aria-label="Footer navigation">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo-white.png" alt="IronGrid Technologies" />
+          <p>Senior contract engineering.<br />Forged properly, handed off cleanly.</p>
+        </div>
+        <nav class="footer-cols" aria-label="Footer navigation">
+          <div>
+            <h4>Services</h4>
+            <a href="#services">Software Development</a>
+            <a href="#services">Cloud &amp; Infrastructure</a>
+            <a href="#services">DevOps &amp; Platform</a>
+            <a href="#services">Staff Augmentation</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#approach">Approach</a>
+            <a href="#models">Engagement Models</a>
+            <a href="#principles">Principles</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a>
+            <a href="#contact">Start a project</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> IronGrid Technologies LLC. All rights reserved.</p>
+        <p class="footer-tag">Built on the grid.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
