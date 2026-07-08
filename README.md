@@ -7,12 +7,14 @@ infrastructure work, staff augmentation, and technical consulting.
 ## Stack
 
 Plain static HTML + CSS + vanilla JS. No build step, no frameworks, no
-dependencies (Google Fonts is the only external resource).
+external dependencies — fonts are self-hosted.
 
 ```
 index.html                # Single-page site (hero, services, approach, models, principles, FAQ, contact)
-css/styles.css            # All styling (dark forge theme, ember accent, grid motif)
-js/main.js                # Interactive hero grid canvas, reveals, nav, FAQ accordion
+404.html                  # Custom "off the grid" 404 page (GitHub Pages picks it up)
+css/styles.css            # All styling (dark forge theme, ember accent, kinetic type)
+js/main.js                # WebGL forge shader, particles, cursor, magnetic buttons, scroll FX
+assets/fonts/             # Space Grotesk + Inter, variable woff2 (SIL OFL)
 assets/logo.png           # Logo, navy on transparent (for light backgrounds)
 assets/logo-white.png     # Logo, white on transparent (used in the dark header)
 assets/favicon.png        # Grid mark on navy chip
@@ -20,8 +22,23 @@ assets/logo-original.png  # Original uploaded logo artwork
 CNAME                     # Custom domain for GitHub Pages
 ```
 
-Animations respect `prefers-reduced-motion`, the hero canvas pauses when
-offscreen, and the layout is responsive down to small phones.
+## Notable machinery
+
+- **Hero** — a hand-written WebGL fragment shader (fbm noise) renders a
+  molten forge under a heat-warped grid, with a cursor-tracking heat
+  bloom; a 2D canvas layers rising ember sparks on top. Falls back to a
+  static gradient without WebGL.
+- **Kinetic type** — the headline splits into characters that rise in
+  with a forge easing after the preloader counts up.
+- **Scroll choreography** — reveal-on-scroll, a timeline that draws
+  itself, ghost section numerals with parallax, and a marquee that skews
+  with scroll velocity.
+- **Pointer craft** — custom cursor (fine pointers only), magnetic
+  buttons, 3D-tilt service cards with glare.
+- **Respect for the visitor** — every effect is disabled under
+  `prefers-reduced-motion`; canvases pause offscreen and on hidden tabs;
+  semantic HTML, focus-visible states, and no layout shift. Try the
+  Konami code.
 
 ## Local preview
 

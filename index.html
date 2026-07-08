@@ -3,21 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IronGrid Technologies — Senior Contract Engineering</title>
+  <title>IronGrid Technologies — We Forge the Systems You Run On</title>
   <meta name="description" content="IronGrid Technologies LLC is a technology contracting agency. Senior engineers embed with your team to design, build, and ship production software — cloud, DevOps, custom development, and consulting." />
   <meta property="og:title" content="IronGrid Technologies — Senior Contract Engineering" />
   <meta property="og:description" content="A technology contracting agency. Senior engineers who design, build, and ship the systems your business runs on." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://irongridtechnologiesllc.com/" />
   <meta property="og:image" content="https://irongridtechnologiesllc.com/assets/logo-original.png" />
-  <meta name="theme-color" content="#05080d" />
+  <meta name="theme-color" content="#04070b" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IronGrid Technologies LLC",
+    "url": "https://irongridtechnologiesllc.com",
+    "logo": "https://irongridtechnologiesllc.com/assets/logo-original.png",
+    "email": "contact@irongridtechnologiesllc.com",
+    "description": "Technology contracting agency: custom software development, cloud and infrastructure, DevOps, staff augmentation, and technical consulting."
+  }
+  </script>
 </head>
-<body>
+<body class="preloading">
+
+  <!-- ================= Preloader ================= -->
+  <div class="preloader" id="preloader">
+    <div class="pre-inner">
+      <div class="pre-mark" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <p class="pre-label">FORGING<span class="pre-count"><span id="preCount">0</span>%</span></p>
+    </div>
+  </div>
+
+  <!-- ================= Custom cursor ================= -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
   <div class="grain" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
@@ -28,14 +54,14 @@
         <img class="brand-logo" src="assets/logo-white.png" alt="IronGrid Technologies" />
       </a>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#models">Engagement</a>
-        <a href="#principles">Principles</a>
-        <a href="#faq">FAQ</a>
+        <a href="#services"><span data-n="01">Services</span></a>
+        <a href="#approach"><span data-n="02">Approach</span></a>
+        <a href="#models"><span data-n="03">Engagement</span></a>
+        <a href="#principles"><span data-n="04">Principles</span></a>
+        <a href="#faq"><span data-n="05">FAQ</span></a>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-primary btn-sm" href="#contact">Start a project</a>
+        <a class="btn btn-primary btn-sm" data-magnetic href="#contact">Start a project</a>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
           <span></span><span></span>
         </button>
@@ -46,39 +72,51 @@
   <main id="top">
     <!-- ================= Hero ================= -->
     <section class="hero" id="hero">
-      <canvas id="gridCanvas" aria-hidden="true"></canvas>
+      <canvas id="forgeCanvas" aria-hidden="true"></canvas>
+      <canvas id="sparkCanvas" aria-hidden="true"></canvas>
       <div class="hero-fade" aria-hidden="true"></div>
+
       <div class="container hero-inner">
-        <p class="badge" data-reveal>
+        <p class="badge" data-hero="1">
           <span class="badge-dot" aria-hidden="true"></span>
           Available for new engagements
         </p>
-        <h1 class="hero-title" data-reveal>
-          We <em>forge</em> the systems<br />
-          your business runs on.
+
+        <h1 class="hero-title" aria-label="We forge the systems you run on.">
+          <span class="line" data-split data-hero="2">WE FORGE THE</span>
+          <span class="line line-outline" data-split data-hero="3">SYSTEMS</span>
+          <span class="line" data-split data-hero="4">YOU RUN ON<em class="line-dot">.</em></span>
         </h1>
-        <p class="lede" data-reveal>
-          IronGrid Technologies is a technology contracting agency. Senior engineers
-          embed with your team to design, build, and ship production software —
-          then hand you the keys.
-        </p>
-        <div class="hero-actions" data-reveal>
-          <a class="btn btn-primary btn-lg" href="#contact">Start a project
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn-ghost btn-lg" href="#services">Explore services</a>
+
+        <div class="hero-row" data-hero="5">
+          <p class="lede">
+            IronGrid Technologies is a technology contracting agency. Senior
+            engineers embed with your team to design, build, and ship
+            production software — then hand you the keys.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" data-magnetic href="#contact">Start a project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" data-magnetic href="#services">Explore services</a>
+          </div>
         </div>
-        <dl class="hero-stats" data-reveal>
-          <div><dt>100%</dt><dd>senior engineers</dd></div>
-          <div><dt>&lt;24h</dt><dd>first response</dd></div>
-          <div><dt>1</dt><dd>direct point of contact</dd></div>
-          <div><dt>0</dt><dd>layers of middlemen</dd></div>
+
+        <dl class="hero-stats" data-hero="6">
+          <div><dt><span class="num" data-target="100">0</span>%</dt><dd>senior engineers</dd></div>
+          <div><dt>&lt;<span class="num" data-target="24">0</span>h</dt><dd>first response</dd></div>
+          <div><dt><span class="num" data-target="1">0</span></dt><dd>direct point of contact</dd></div>
+          <div><dt><span class="num" data-target="0">0</span></dt><dd>layers of middlemen</dd></div>
         </dl>
       </div>
+
+      <a class="scroll-cue" href="#services" data-hero="7" aria-label="Scroll to services">
+        <span>SCROLL</span><i aria-hidden="true"></i>
+      </a>
     </section>
 
     <!-- ================= Marquee ================= -->
-    <div class="marquee" aria-hidden="true">
+    <div class="marquee" id="marquee" aria-hidden="true">
       <div class="marquee-track">
         <span>Software Development</span><i>◆</i>
         <span>Cloud Architecture</span><i>◆</i>
@@ -101,6 +139,7 @@
 
     <!-- ================= Services ================= -->
     <section id="services" class="section">
+      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">01</span>
       <div class="container">
         <p class="eyebrow" data-reveal><span>01</span> Services</p>
         <h2 data-reveal>Practical, senior-level help<br />across the stack.</h2>
@@ -109,7 +148,8 @@
           systems — on contract terms that fit your project.
         </p>
         <div class="card-grid">
-          <article class="card" data-reveal>
+          <article class="card" data-tilt data-reveal>
+            <div class="card-glare" aria-hidden="true"></div>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -117,7 +157,8 @@
             <p>Web applications, APIs, and internal tools engineered for the long haul — built to be maintained, not just delivered.</p>
             <ul class="card-tags"><li>TypeScript</li><li>React</li><li>Node</li><li>Python</li><li>Go</li></ul>
           </article>
-          <article class="card" data-reveal>
+          <article class="card" data-tilt data-reveal>
+            <div class="card-glare" aria-hidden="true"></div>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 1 1 .6-7.97 5.5 5.5 0 0 1 10.79 1.42A3.5 3.5 0 0 1 17.5 18Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -125,7 +166,8 @@
             <p>Architecture, migrations, and infrastructure-as-code with environments that stay reproducible and costs that stay visible.</p>
             <ul class="card-tags"><li>AWS</li><li>Azure</li><li>GCP</li><li>Terraform</li></ul>
           </article>
-          <article class="card" data-reveal>
+          <article class="card" data-tilt data-reveal>
+            <div class="card-glare" aria-hidden="true"></div>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5-2 2m-7 7-2 2m11 0-2-2m-7-7-2-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
             </div>
@@ -133,7 +175,8 @@
             <p>CI/CD pipelines, containerization, observability, and the paved roads that let your developers ship without fear.</p>
             <ul class="card-tags"><li>Kubernetes</li><li>Docker</li><li>GitHub Actions</li><li>Grafana</li></ul>
           </article>
-          <article class="card" data-reveal>
+          <article class="card" data-tilt data-reveal>
+            <div class="card-glare" aria-hidden="true"></div>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M16 19a4 4 0 0 0-8 0M12 12a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4ZM19 8v4m2-2h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -141,7 +184,8 @@
             <p>Vetted senior contractors who integrate with your team, tooling, and process — from one specialist to a full delivery pod.</p>
             <ul class="card-tags"><li>Individual</li><li>Pod</li><li>Embedded</li></ul>
           </article>
-          <article class="card" data-reveal>
+          <article class="card" data-tilt data-reveal>
+            <div class="card-glare" aria-hidden="true"></div>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 17.5 9.5 12 4 6.5M12 19h8M12 5h8m-8 7h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -149,7 +193,8 @@
             <p>Incremental, low-risk migrations off systems that hold you back — strangler-fig rewrites, framework upgrades, database moves.</p>
             <ul class="card-tags"><li>Assess</li><li>Stabilize</li><li>Migrate</li></ul>
           </article>
-          <article class="card" data-reveal>
+          <article class="card" data-tilt data-reveal>
+            <div class="card-glare" aria-hidden="true"></div>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6.5v5c0 4.5 3.2 7.6 7.5 9.5 4.3-1.9 7.5-5 7.5-9.5v-5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -163,6 +208,7 @@
 
     <!-- ================= Approach ================= -->
     <section id="approach" class="section section-alt">
+      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">02</span>
       <div class="container">
         <p class="eyebrow" data-reveal><span>02</span> Approach</p>
         <h2 data-reveal>The IronGrid method.</h2>
@@ -170,7 +216,7 @@
           Contracting has a reputation problem. We fix it with a process that is
           boring in the best possible way: predictable, transparent, and documented.
         </p>
-        <ol class="timeline">
+        <ol class="timeline" id="timeline">
           <li class="timeline-step" data-reveal>
             <span class="step-num">01</span>
             <div>
@@ -205,6 +251,7 @@
 
     <!-- ================= Engagement models ================= -->
     <section id="models" class="section">
+      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">03</span>
       <div class="container">
         <p class="eyebrow" data-reveal><span>03</span> Engagement models</p>
         <h2 data-reveal>Three ways to work with us.</h2>
@@ -253,32 +300,50 @@
 
     <!-- ================= Principles ================= -->
     <section id="principles" class="section section-alt">
+      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">04</span>
       <div class="container">
         <p class="eyebrow" data-reveal><span>04</span> Principles</p>
-        <h2 data-reveal>What we refuse to compromise on.</h2>
-        <div class="principle-grid">
-          <div class="principle" data-reveal>
-            <h3>Senior only.</h3>
-            <p>No one learns on your dime. Every engineer on an IronGrid engagement has shipped and operated production systems.</p>
-          </div>
-          <div class="principle" data-reveal>
-            <h3>You own everything.</h3>
-            <p>Code, infrastructure, credentials, and documentation live in <em>your</em> accounts from day one. Walking away from us should always be easy.</p>
-          </div>
-          <div class="principle" data-reveal>
-            <h3>No black boxes.</h3>
-            <p>Weekly demos of running software and status reports that include the bad news. You will never wonder what you're paying for.</p>
-          </div>
-          <div class="principle" data-reveal>
-            <h3>Built to hand off.</h3>
-            <p>Engagements end. Your codebase shouldn't need us forever — we document, we teach, and we leave things better than we found them.</p>
-          </div>
+        <h2 data-reveal>What we refuse to<br />compromise on.</h2>
+        <div class="prow-list">
+          <button class="prow" aria-expanded="false" data-reveal>
+            <span class="prow-num" aria-hidden="true">01</span>
+            <span class="prow-body">
+              <span class="prow-title">Senior only.</span>
+              <span class="prow-desc"><span>No one learns on your dime. Every engineer on an IronGrid engagement has shipped and operated production systems.</span></span>
+            </span>
+            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="prow" aria-expanded="false" data-reveal>
+            <span class="prow-num" aria-hidden="true">02</span>
+            <span class="prow-body">
+              <span class="prow-title">You own everything.</span>
+              <span class="prow-desc"><span>Code, infrastructure, credentials, and documentation live in your accounts from day one. Walking away from us should always be easy.</span></span>
+            </span>
+            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="prow" aria-expanded="false" data-reveal>
+            <span class="prow-num" aria-hidden="true">03</span>
+            <span class="prow-body">
+              <span class="prow-title">No black boxes.</span>
+              <span class="prow-desc"><span>Weekly demos of running software and status reports that include the bad news. You will never wonder what you're paying for.</span></span>
+            </span>
+            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="prow" aria-expanded="false" data-reveal>
+            <span class="prow-num" aria-hidden="true">04</span>
+            <span class="prow-body">
+              <span class="prow-title">Built to hand off.</span>
+              <span class="prow-desc"><span>Engagements end. Your codebase shouldn't need us forever — we document, we teach, and we leave things better than we found them.</span></span>
+            </span>
+            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- ================= FAQ ================= -->
     <section id="faq" class="section">
+      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">05</span>
       <div class="container narrow">
         <p class="eyebrow" data-reveal><span>05</span> FAQ</p>
         <h2 data-reveal>Questions, answered straight.</h2>
@@ -331,6 +396,7 @@
 
     <!-- ================= CTA ================= -->
     <section id="contact" class="section section-cta">
+      <span class="ghost-word" data-parallax="0.25" aria-hidden="true">CONTACT</span>
       <div class="cta-grid-bg" aria-hidden="true"></div>
       <div class="container center">
         <h2 class="cta-title" data-reveal>Let's build something<br /><em>that lasts.</em></h2>
@@ -338,11 +404,16 @@
           Tell us about your project, your deadline, or the gap in your team.
           We respond to every inquiry within one business day.
         </p>
-        <div data-reveal>
-          <a class="btn btn-primary btn-xl" href="mailto:contact@irongridtechnologiesllc.com">
-            contact@irongridtechnologiesllc.com
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="cta-actions" data-reveal>
+          <a class="mega-btn" data-magnetic href="mailto:contact@irongridtechnologiesllc.com">
+            <span class="mega-fill" aria-hidden="true"></span>
+            <span class="mega-text">Start your project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
           </a>
+          <p class="cta-email">
+            <a href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a>
+          </p>
           <p class="cta-note">Prefer a call? Email us two times that work and we'll send an invite.</p>
         </div>
       </div>
