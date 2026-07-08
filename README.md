@@ -9,9 +9,13 @@ infrastructure work, staff augmentation, and technical consulting.
 Plain static HTML + CSS. No build step, no frameworks, no dependencies.
 
 ```
-index.html       # Single-page site (hero, services, approach, about, contact)
-css/styles.css   # All styling (system fonts, dark industrial theme)
-CNAME            # Custom domain for GitHub Pages
+index.html                # Single-page site (hero, services, approach, about, contact)
+css/styles.css            # All styling (system fonts, dark industrial theme)
+assets/logo.png           # Logo, navy on transparent (for light backgrounds)
+assets/logo-white.png     # Logo, white on transparent (used in the dark header)
+assets/favicon.png        # Grid mark on navy chip
+assets/logo-original.png  # Original uploaded logo artwork
+CNAME                     # Custom domain for GitHub Pages
 ```
 
 ## Local preview
