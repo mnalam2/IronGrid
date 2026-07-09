@@ -354,7 +354,7 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4px) rotate(-
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: 9.5rem 0 5.5rem;
+  padding: 9.5rem 0 8.5rem;
   overflow: hidden;
   background: var(--bg0);
 }

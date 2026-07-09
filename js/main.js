@@ -312,27 +312,15 @@
   });
 
   /* ============================================================
-     Scroll-linked effects: ghost parallax, timeline draw,
-     marquee velocity skew
+     Scroll-linked effects: ghost parallax, timeline draw
      ============================================================ */
   const ghosts = [...document.querySelectorAll("[data-parallax]")];
   const timeline = document.getElementById("timeline");
   const timelineSteps = timeline ? [...timeline.querySelectorAll(".timeline-step")] : [];
-  const marquee = document.getElementById("marquee");
-  let velo = 0, lastScrollY = window.scrollY;
 
   if (!reducedMotion) {
     (function scrollFx() {
       const vh = window.innerHeight;
-      const y = window.scrollY;
-
-      velo = lerp(velo, y - lastScrollY, 0.12);
-      lastScrollY = y;
-
-      if (marquee) {
-        const skew = clamp(velo * 0.28, -9, 9);
-        marquee.style.transform = `skewY(${skew.toFixed(2)}deg)`;
-      }
 
       ghosts.forEach((g) => {
         const r = g.getBoundingClientRect();
