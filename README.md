@@ -1,8 +1,13 @@
 # IronGrid Technologies LLC
 
 Marketing website for [irongridtechnologiesllc.com](https://irongridtechnologiesllc.com) —
-a technology contracting agency offering software development, cloud &
-infrastructure work, staff augmentation, and technical consulting.
+a web design & development studio that builds fast, custom websites for
+businesses of every kind: business sites, e-commerce & booking, redesigns,
+landing pages, SEO & performance, and ongoing care plans.
+
+> Note: the `claude/iron-grid-tech-website-bg1nmt` branch holds an alternate
+> version of this site positioned as a general tech contracting agency,
+> kept for future use.
 
 ## Stack
 
