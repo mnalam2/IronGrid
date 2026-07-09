@@ -11,6 +11,16 @@
   <meta property="og:url" content="https://irongridtechnologiesllc.com/" />
   <meta property="og:image" content="https://irongridtechnologiesllc.com/assets/logo-original.png" />
   <meta name="theme-color" content="#04070b" />
+  <link rel="canonical" href="https://irongridtechnologiesllc.com/" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("ig-theme");
+      if (t !== "light" && t !== "dark") {
+        t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -30,6 +40,7 @@
   </script>
 </head>
 <body class="preloading">
+  <a class="skip-link" href="#top">Skip to content</a>
 
   <!-- ================= Preloader ================= -->
   <div class="preloader" id="preloader">
@@ -52,16 +63,21 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="IronGrid Technologies — home">
-        <img class="brand-logo" src="assets/logo-white.png" alt="IronGrid Technologies" />
+        <img class="brand-logo logo-on-dark" src="assets/logo-white.png" alt="IronGrid Technologies" />
+        <img class="brand-logo logo-on-light" src="assets/logo.png" alt="IronGrid Technologies" />
       </a>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-        <a href="#services"><span data-n="01">Services</span></a>
-        <a href="#approach"><span data-n="02">Process</span></a>
-        <a href="#models"><span data-n="03">Packages</span></a>
-        <a href="#principles"><span data-n="04">Principles</span></a>
+        <a href="#work"><span data-n="01">Work</span></a>
+        <a href="#services"><span data-n="02">Services</span></a>
+        <a href="#approach"><span data-n="03">Process</span></a>
+        <a href="#models"><span data-n="04">Packages</span></a>
         <a href="#faq"><span data-n="05">FAQ</span></a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v2.4m0 13.2V21m9-9h-2.4M5.4 12H3m15.4-6.4-1.7 1.7M7.3 16.7l-1.7 1.7m12.8 0-1.7-1.7M7.3 7.3 5.6 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 14.2A8.2 8.2 0 0 1 9.8 3.7a8.2 8.2 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
         <a class="btn btn-primary btn-sm" data-magnetic href="#contact">Get a free quote</a>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
           <span></span><span></span>
@@ -144,11 +160,117 @@
       </div>
     </div>
 
-    <!-- ================= Services ================= -->
-    <section id="services" class="section">
+    <!-- ================= Work ================= -->
+    <section id="work" class="section">
       <span class="ghost-num" data-parallax="0.5" aria-hidden="true">01</span>
       <div class="container">
-        <p class="eyebrow" data-reveal><span>01</span> Services</p>
+        <p class="eyebrow" data-reveal><span>01</span> Work</p>
+        <h2 data-reveal>Proof, not promises.</h2>
+        <p class="section-lede" data-reveal>
+          We're a new studio, so we won't show you a wall of borrowed logos.
+          Instead: concept builds that show exactly how we think — and the site
+          you're on right now, with numbers you can verify yourself.
+        </p>
+
+        <div class="project-list">
+          <article class="project" data-reveal>
+            <figure class="mock mock-rest" aria-hidden="true">
+              <div class="mock-bar"><i></i><i></i><i></i><span>rosettabistro.com</span></div>
+              <div class="mock-view">
+                <div class="mock-scroll">
+                  <div class="mb m-hero"><b class="m-title"></b><b class="m-btn"></b></div>
+                  <div class="m-row"><b></b><b></b><b></b></div>
+                  <div class="mb m-band"><b class="m-title"></b></div>
+                  <div class="m-row m-row2"><b></b><b></b></div>
+                  <div class="mb m-foot"></div>
+                </div>
+              </div>
+              <figcaption class="mock-tag">Concept build</figcaption>
+            </figure>
+            <div class="project-info">
+              <p class="project-ind">Restaurant</p>
+              <h3>Rosetta Bistro</h3>
+              <p class="project-brief">A neighborhood bistro whose only "website" was a PDF menu on Google Maps — invisible to anyone searching for a table.</p>
+              <ul class="project-points">
+                <li><strong>Challenge</strong> Diners decide in seconds, on their phones, usually at 6pm with a hungry group in tow.</li>
+                <li><strong>Solution</strong> A one-thumb mobile experience: menu, hours, and a reserve button that's always one tap away.</li>
+                <li><strong>Engineered for</strong> Table bookings from mobile search, and a menu Google can actually read and rank.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <figure class="mock mock-law" aria-hidden="true">
+              <div class="mock-bar"><i></i><i></i><i></i><span>halemarrowlaw.com</span></div>
+              <div class="mock-view">
+                <div class="mock-scroll">
+                  <div class="mb m-hero"><b class="m-title"></b><b class="m-btn"></b></div>
+                  <div class="mb m-band"><b class="m-title"></b></div>
+                  <div class="m-row"><b></b><b></b><b></b></div>
+                  <div class="m-row m-row2"><b></b><b></b></div>
+                  <div class="mb m-foot"></div>
+                </div>
+              </div>
+              <figcaption class="mock-tag">Concept build</figcaption>
+            </figure>
+            <div class="project-info">
+              <p class="project-ind">Law firm</p>
+              <h3>Hale &amp; Marrow</h3>
+              <p class="project-brief">A two-partner firm competing against downtown giants with ten times the marketing budget.</p>
+              <ul class="project-points">
+                <li><strong>Challenge</strong> Legal clients hire on trust — a dated site quietly loses cases to competitors before the first phone call.</li>
+                <li><strong>Solution</strong> Quiet authority: restrained typography, practice areas answered in plain English, attorney bios that feel human.</li>
+                <li><strong>Engineered for</strong> Consultation requests, and ranking for the local searches that actually bring clients.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <figure class="mock mock-shop" aria-hidden="true">
+              <div class="mock-bar"><i></i><i></i><i></i><span>northpinegoods.com</span></div>
+              <div class="mock-view">
+                <div class="mock-scroll">
+                  <div class="mb m-hero"><b class="m-title"></b><b class="m-btn"></b></div>
+                  <div class="m-row"><b></b><b></b><b></b></div>
+                  <div class="m-row"><b></b><b></b><b></b></div>
+                  <div class="mb m-band"><b class="m-title"></b></div>
+                  <div class="mb m-foot"></div>
+                </div>
+              </div>
+              <figcaption class="mock-tag">Concept build</figcaption>
+            </figure>
+            <div class="project-info">
+              <p class="project-ind">Retail &amp; e-commerce</p>
+              <h3>Northpine Goods</h3>
+              <p class="project-brief">An outdoor goods maker selling well at markets but losing online sales to a slow, clunky storefront.</p>
+              <ul class="project-points">
+                <li><strong>Challenge</strong> Every second of load time costs carts. Their old store took eight to render a product photo.</li>
+                <li><strong>Solution</strong> A storefront rebuilt for speed — instant product pages, three-tap checkout, photography that sells the brand.</li>
+                <li><strong>Engineered for</strong> Completed checkouts on mobile and product pages that rank on search.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <aside class="case-real" data-reveal>
+          <p class="case-real-tag">The flagship case study</p>
+          <h3>The site you're reading right now.</h3>
+          <p>Real-time WebGL, custom typography, dark and light themes, and a full animation system — delivered in <strong>under 200&nbsp;KB</strong>, lighter than a single stock photo. Zero frameworks, zero trackers, self-hosted fonts, hand-written code. Open your dev tools and check — that's the audit we invite on every site we ship.</p>
+          <ul class="case-real-stats" role="list">
+            <li><strong>&lt;200 KB</strong><span>total first load</span></li>
+            <li><strong>0</strong><span>frameworks or trackers</span></li>
+            <li><strong>100%</strong><span>hand-written code</span></li>
+          </ul>
+          <p class="next-cta"><a href="#contact">Want yours built the same way? Get a free quote<span aria-hidden="true"> →</span></a></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= Services ================= -->
+    <section id="services" class="section section-alt">
+      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">02</span>
+      <div class="container">
+        <p class="eyebrow" data-reveal><span>02</span> Services</p>
         <h2 data-reveal>Everything your business<br />needs to win online.</h2>
         <p class="section-lede" data-reveal>
           From a single landing page to a full online store — designed, built,
@@ -210,14 +332,15 @@
             <ul class="card-tags"><li>Hosting</li><li>Updates</li><li>Support</li></ul>
           </article>
         </div>
+        <p class="next-cta" data-reveal><a href="#contact">Not sure which you need? Ask us — it's free<span aria-hidden="true"> →</span></a></p>
       </div>
     </section>
 
     <!-- ================= Approach ================= -->
-    <section id="approach" class="section section-alt">
-      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">02</span>
+    <section id="approach" class="section">
+      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">03</span>
       <div class="container">
-        <p class="eyebrow" data-reveal><span>02</span> Process</p>
+        <p class="eyebrow" data-reveal><span>03</span> Process</p>
         <h2 data-reveal>From first call to launch day.</h2>
         <p class="section-lede" data-reveal>
           You don't need to speak tech — that's our job. A clear four-step
@@ -253,14 +376,15 @@
             </div>
           </li>
         </ol>
+        <p class="next-cta" data-reveal><a href="#contact">Step one is a free conversation. Start it<span aria-hidden="true"> →</span></a></p>
       </div>
     </section>
 
     <!-- ================= Engagement models ================= -->
-    <section id="models" class="section">
-      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">03</span>
+    <section id="models" class="section section-alt">
+      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">04</span>
       <div class="container">
-        <p class="eyebrow" data-reveal><span>03</span> Packages</p>
+        <p class="eyebrow" data-reveal><span>04</span> Packages</p>
         <h2 data-reveal>Pick the size that fits.</h2>
         <p class="section-lede" data-reveal>
           Every project gets a flat, written quote before we start. No hourly
@@ -302,14 +426,15 @@
             <p class="model-fit">Best for: selling online or unusual needs</p>
           </article>
         </div>
+        <p class="next-cta" data-reveal><a href="#contact">Get a flat quote for your project<span aria-hidden="true"> →</span></a></p>
       </div>
     </section>
 
     <!-- ================= Principles ================= -->
-    <section id="principles" class="section section-alt">
-      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">04</span>
+    <section id="principles" class="section">
+      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">05</span>
       <div class="container">
-        <p class="eyebrow" data-reveal><span>04</span> Principles</p>
+        <p class="eyebrow" data-reveal><span>05</span> Principles</p>
         <h2 data-reveal>What we refuse to<br />compromise on.</h2>
         <div class="prow-list">
           <button class="prow" aria-expanded="false" data-reveal>
@@ -349,10 +474,10 @@
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section id="faq" class="section">
-      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">05</span>
+    <section id="faq" class="section section-alt">
+      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">06</span>
       <div class="container narrow">
-        <p class="eyebrow" data-reveal><span>05</span> FAQ</p>
+        <p class="eyebrow" data-reveal><span>06</span> FAQ</p>
         <h2 data-reveal>Questions, answered straight.</h2>
         <div class="faq-list">
           <div class="faq-item" data-reveal>
@@ -397,6 +522,13 @@
             </button>
             <div class="faq-a"><div><p>The site is yours. Many clients add a care plan — updates, content edits, backups, security, and a real human answering support emails. Others take the launch walkthrough and run it themselves. Both are completely fine, and you can switch anytime.</p></div></div>
           </div>
+          <div class="faq-item" data-reveal>
+            <button class="faq-q" aria-expanded="false">
+              Do you have client references?
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-a"><div><p>We're a new studio, so instead of a testimonial wall we show working proof: the site you're on and the concept builds above. You'll see real designs of your actual site before you commit a dollar — so the only thing you're trusting up front is a free conversation.</p></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -433,7 +565,8 @@
       <p class="footer-word" aria-hidden="true">IRONGRID</p>
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="assets/logo-white.png" alt="IronGrid Technologies" />
+          <img class="logo-on-dark" src="assets/logo-white.png" alt="IronGrid Technologies" />
+          <img class="logo-on-light" src="assets/logo.png" alt="IronGrid Technologies" />
           <p>Websites forged for any business.<br />Fast, custom, and completely yours.</p>
         </div>
         <nav class="footer-cols" aria-label="Footer navigation">

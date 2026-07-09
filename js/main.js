@@ -14,6 +14,18 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   /* ============================================================
+     Theme toggle (initial theme is set inline in <head>)
+     ============================================================ */
+  const isLight = () => document.documentElement.dataset.theme === "light";
+
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const next = isLight() ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("ig-theme", next); } catch (_) {}
+    document.dispatchEvent(new CustomEvent("themechange"));
+  });
+
+  /* ============================================================
      Split hero title into animatable characters
      ============================================================ */
   document.querySelectorAll("[data-split]").forEach((line) => {
@@ -365,6 +377,7 @@
     uniform float uTime;
     uniform vec2 uMouse;
     uniform float uBoost;
+    uniform float uLight;
 
     float hash(vec2 p) {
       return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
@@ -399,33 +412,38 @@
       float n = fbm(p * 2.1 + vec2(0.0, -t * 1.6));
       float n2 = fbm(p * 3.8 + vec2(t * 0.5, -t * 2.2) + n * 1.4);
 
-      // deep steel base with vertical falloff
-      vec3 col = mix(vec3(0.012, 0.022, 0.038), vec3(0.028, 0.05, 0.085), uv.y * 0.9);
+      // base: deep steel (dark) or warm paper (light), vertical falloff
+      vec3 baseA = mix(vec3(0.012, 0.022, 0.038), vec3(0.985, 0.975, 0.960), uLight);
+      vec3 baseB = mix(vec3(0.028, 0.05, 0.085), vec3(0.945, 0.925, 0.895), uLight);
+      vec3 col = mix(baseA, baseB, uv.y * 0.9);
 
-      // ember glow, hottest low in the frame (the forge below)
+      // ember glow, hottest low in the frame (subtler on paper)
       float ember = pow(max(n2, 0.0), 2.4) * smoothstep(0.95, 0.02, uv.y);
-      col += vec3(1.0, 0.4, 0.16) * ember * (0.4 + uBoost * 0.55);
+      vec3 emberTint = mix(vec3(1.0, 0.4, 0.16), vec3(-0.22, -0.34, -0.38), uLight);
+      col += emberTint * ember * (0.4 + uBoost * 0.55) * (1.0 - uLight * 0.45);
 
-      // faint blue sheen drifting through
-      col += vec3(0.3, 0.55, 1.0) * pow(max(n, 0.0), 3.2) * 0.10;
+      // faint sheen drifting through (skip on light)
+      col += vec3(0.3, 0.55, 1.0) * pow(max(n, 0.0), 3.2) * 0.10 * (1.0 - uLight);
 
       // grid, warped slightly by the heat haze
       vec2 gp = (gl_FragCoord.xy + vec2(n2, n) * 26.0) / 56.0;
       vec2 gf = abs(fract(gp) - 0.5);
       float line = smoothstep(0.47, 0.5, max(gf.x, gf.y));
-      col += vec3(0.5, 0.6, 0.72) * line * 0.055;
+      vec3 lineTint = mix(vec3(0.5, 0.6, 0.72), vec3(-0.35, -0.28, -0.20), uLight);
+      col += lineTint * line * mix(0.055, 0.16, uLight);
 
       // cursor heat bloom
       vec2 m = uMouse;
       m.x *= uRes.x / uRes.y;
       float d = distance(p, m);
       float heat = exp(-d * 3.4);
-      col += vec3(1.0, 0.45, 0.18) * heat * (0.20 + uBoost * 0.3);
-      col += vec3(0.65, 0.78, 1.0) * line * heat * 0.55;
+      vec3 heatTint = mix(vec3(1.0, 0.45, 0.18), vec3(0.28, -0.06, -0.14), uLight);
+      col += heatTint * heat * (0.20 + uBoost * 0.3);
+      col += mix(vec3(0.65, 0.78, 1.0), vec3(-0.3, -0.22, -0.12), uLight) * line * heat * 0.55;
 
-      // vignette
+      // vignette (gentle on light)
       float vig = smoothstep(1.25, 0.35, distance(uv, vec2(0.5, 0.48)));
-      col *= mix(0.72, 1.0, vig);
+      col *= mix(mix(0.72, 0.955, uLight), 1.0, vig);
 
       gl_FragColor = vec4(col, 1.0);
     }
@@ -467,6 +485,8 @@
     const uTime = gl.getUniformLocation(prog, "uTime");
     const uMouse = gl.getUniformLocation(prog, "uMouse");
     const uBoost = gl.getUniformLocation(prog, "uBoost");
+    const uLight = gl.getUniformLocation(prog, "uLight");
+    let lightVal = isLight() ? 1 : 0;
 
     let mTX = 0.5, mTY = 0.62, mX = 0.5, mY = 0.62; // aspect-free targets
     let heroVisible = true;
@@ -493,17 +513,23 @@
 
     function draw(now) {
       overdrive = lerp(overdrive, overdriveTarget, 0.03);
+      lightVal = lerp(lightVal, isLight() ? 1 : 0, 0.05);
       mX = lerp(mX, mTX, 0.06);
       mY = lerp(mY, mTY, 0.06);
       gl.uniform2f(uRes, forgeCanvas.width, forgeCanvas.height);
       gl.uniform1f(uTime, (now - start) / 1000);
       gl.uniform2f(uMouse, mX, mY);
       gl.uniform1f(uBoost, overdrive);
+      gl.uniform1f(uLight, lightVal);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
 
     if (reducedMotion) {
       draw(1200); // single static frame
+      document.addEventListener("themechange", () => {
+        lightVal = isLight() ? 1 : 0;
+        draw(1200);
+      });
       return;
     }
 
@@ -563,6 +589,7 @@
       if (!heroVisible || document.hidden) return;
       ctx.clearRect(0, 0, W, H);
       const boost = 1 + overdrive * 1.6;
+      const light = isLight();
       for (const s of sparks) {
         s.life++;
         if (s.life > s.maxLife || s.y < -12) { spawn(s); continue; }
@@ -570,8 +597,8 @@
         s.x += s.vx + Math.sin(s.wobble) * 0.25;
         s.y += s.vy * boost;
         const fade = Math.sin((s.life / s.maxLife) * Math.PI);
-        ctx.globalAlpha = fade * 0.75;
-        ctx.fillStyle = `rgba(${s.hue}, 1)`;
+        ctx.globalAlpha = fade * (light ? 0.5 : 0.75);
+        ctx.fillStyle = light ? "rgba(178, 72, 34, 1)" : `rgba(${s.hue}, 1)`;
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
         ctx.fill();
