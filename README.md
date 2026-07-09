@@ -36,7 +36,8 @@ CNAME                     # Custom domain for GitHub Pages
 - **Kinetic type** — the headline splits into characters that rise in
   with a forge easing after the preloader counts up.
 - **Scroll choreography** — reveal-on-scroll, a timeline that draws
-  itself, and ghost section numerals with parallax.
+  itself, ghost section numerals with parallax, and a marquee that skews
+  with scroll velocity.
 - **Pointer craft** — custom cursor (fine pointers only), magnetic
   buttons, 3D-tilt service cards with glare.
 - **Respect for the visitor** — every effect is disabled under
