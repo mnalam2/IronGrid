@@ -312,6 +312,45 @@
   });
 
   /* ============================================================
+     Quote form — EmailJS
+     ============================================================ */
+  const quoteForm = document.getElementById("quoteForm");
+  if (quoteForm) {
+    const statusEl = document.getElementById("formStatus");
+    const submitBtn = quoteForm.querySelector(".form-submit");
+    const labelEl = document.getElementById("submitLabel");
+
+    quoteForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (submitBtn.disabled) return;
+
+      submitBtn.disabled = true;
+      labelEl.textContent = "Sending…";
+      statusEl.textContent = "";
+      statusEl.classList.remove("ok", "error");
+
+      try {
+        if (!window.emailjs) throw new Error("EmailJS failed to load");
+        await emailjs.sendForm(
+          "service_8jo6k7h",      // Service ID
+          "template_0uweoxf",     // Template ID
+          e.target,               // form element ref
+          "-aQbtf3t-VTPboaHm"     // Public Key
+        );
+        quoteForm.reset();
+        statusEl.textContent = "Sent! You'll hear back with a flat quote within one business day.";
+        statusEl.classList.add("ok");
+      } catch (err) {
+        statusEl.textContent = "Something went wrong — email us at contact@irongridtechnologiesllc.com instead.";
+        statusEl.classList.add("error");
+      } finally {
+        labelEl.textContent = "Get your free quote";
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+  /* ============================================================
      Scroll-linked effects: ghost parallax, timeline draw,
      marquee velocity skew
      ============================================================ */

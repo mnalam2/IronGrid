@@ -510,16 +510,43 @@
           answer and a flat quote — free, within one business day.
         </p>
         <div class="cta-actions" data-reveal>
-          <a class="mega-btn" data-magnetic href="mailto:contact@irongridtechnologiesllc.com">
-            <span class="mega-fill" aria-hidden="true"></span>
-            <span class="mega-text">Get your free quote
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
+          <form class="quote-form" id="quoteForm">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="qf-name">Name</label>
+                <input id="qf-name" name="name" type="text" autocomplete="name" required placeholder="Jane Smith" />
+              </div>
+              <div class="form-field">
+                <label for="qf-email">Email</label>
+                <input id="qf-email" name="email" type="email" autocomplete="email" required placeholder="jane@yourbusiness.com" />
+              </div>
+              <div class="form-field">
+                <label for="qf-phone">Phone <span>(optional)</span></label>
+                <input id="qf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" />
+              </div>
+              <div class="form-field">
+                <label for="qf-business">Business <span>(optional)</span></label>
+                <input id="qf-business" name="business" type="text" autocomplete="organization" placeholder="Smith &amp; Co." />
+              </div>
+              <div class="form-field form-field-full">
+                <label for="qf-message">What do you need?</label>
+                <textarea id="qf-message" name="message" rows="5" required placeholder="Tell us about your business and what you'd like the site to do."></textarea>
+              </div>
+            </div>
+            <div class="form-footer">
+              <button class="mega-btn form-submit" type="submit" data-magnetic>
+                <span class="mega-fill" aria-hidden="true"></span>
+                <span class="mega-text"><span id="submitLabel">Get your free quote</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
           <p class="cta-email">
-            <a href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a>
+            Prefer email? <a href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a>
           </p>
-          <p class="cta-note">Prefer a call? Email us two times that work and we'll send an invite.</p>
+          <p class="cta-note">Prefer a call? Send us two times that work and we'll send an invite.</p>
         </div>
       </div>
     </section>
@@ -564,6 +591,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
