@@ -331,10 +331,24 @@
 
       try {
         if (!window.emailjs) throw new Error("EmailJS failed to load");
-        await emailjs.sendForm(
+        // The EmailJS template only renders {{name}}, {{email}} and
+        // {{message}}, so fold the optional fields into the message body.
+        const data = new FormData(quoteForm);
+        const phone = String(data.get("phone") || "").trim();
+        const business = String(data.get("business") || "").trim();
+        let message = String(data.get("message") || "").trim();
+        const details = [];
+        if (phone) details.push(`Phone: ${phone}`);
+        if (business) details.push(`Business: ${business}`);
+        if (details.length) message += `\n\n${details.join("\n")}`;
+        await emailjs.send(
           "service_8jo6k7h",      // Service ID
           "template_0uweoxf",     // Template ID
-          e.target,               // form element ref
+          {
+            name: String(data.get("name") || "").trim(),
+            email: String(data.get("email") || "").trim(),
+            message,
+          },
           "-aQbtf3t-VTPboaHm"     // Public Key
         );
         quoteForm.reset();
