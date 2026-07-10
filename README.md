@@ -1,8 +1,8 @@
 # IronGrid Technologies LLC
 
 Marketing website for [irongridtechnologiesllc.com](https://irongridtechnologiesllc.com) —
-a technology contracting agency offering software development, cloud &
-infrastructure work, staff augmentation, and technical consulting.
+a premium technology contracting agency: custom software, web and mobile
+development, AI solutions, cloud engineering, DevOps, and staff augmentation.
 
 ## Stack
 
@@ -24,21 +24,15 @@ CNAME                     # Custom domain for GitHub Pages
 
 ## Notable machinery
 
-- **Hero** — a hand-written WebGL fragment shader (fbm noise) renders a
-  molten forge under a heat-warped grid, with a cursor-tracking heat
-  bloom; a 2D canvas layers rising ember sparks on top. Falls back to a
-  static gradient without WebGL.
-- **Kinetic type** — the headline splits into characters that rise in
-  with a forge easing after the preloader counts up.
-- **Scroll choreography** — reveal-on-scroll, a timeline that draws
-  itself, ghost section numerals with parallax, and a marquee that skews
-  with scroll velocity.
-- **Pointer craft** — custom cursor (fine pointers only), magnetic
-  buttons, 3D-tilt service cards with glare.
-- **Respect for the visitor** — every effect is disabled under
-  `prefers-reduced-motion`; canvases pause offscreen and on hidden tabs;
-  semantic HTML, focus-visible states, and no layout shift. Try the
-  Konami code.
+- Dark-first design system: deep neutrals, single violet accent, Space
+  Grotesk + Inter (self-hosted), mono kickers and terminal motifs.
+- Constellation canvas background with cursor-linked nodes; typing
+  terminal in the hero; animated CI pipeline; git-style contribution
+  graph; spotlight service cards; animated stat counters.
+- Honest content: no invented clients or testimonials — commitments,
+  a self-referential case study, and a reserved "your project" slot.
+- All animation disabled under prefers-reduced-motion; canvas pauses
+  offscreen; semantic HTML, skip link, focus states.
 
 ## Local preview
 
