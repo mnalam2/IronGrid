@@ -1827,6 +1827,7 @@ body.loaded .hero-title .char { transform: none; }
 
 @media (max-width: 860px) {
   .project { grid-template-columns: 1fr; gap: 1.6rem; }
+  .project:nth-child(even) .live-card { order: 0; }
   .project-list { gap: 3.2rem; }
   .case-real { padding: 1.8rem 1.4rem; }
   .case-real-stats { gap: 1.6rem; }
