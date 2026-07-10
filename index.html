@@ -3,617 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IronGrid Technologies — Websites for Any Business</title>
-  <meta name="description" content="IronGrid Technologies designs and builds fast, custom websites for businesses of every kind — business sites, online stores, redesigns, SEO, and care plans. Flat quotes, no jargon, and you own everything." />
-  <meta property="og:title" content="IronGrid Technologies — Websites for Any Business" />
-  <meta property="og:description" content="Fast, custom websites for businesses of every kind. Flat quotes, plain English, and you own everything." />
+  <title>IronGrid Technologies — We Build Exceptional Software</title>
+  <meta name="description" content="IronGrid Technologies is a technology contracting agency: custom software, web and mobile development, AI solutions, cloud engineering, DevOps, and staff augmentation for startups, SMBs, enterprises, and government teams." />
+  <meta property="og:title" content="IronGrid Technologies — We Build Exceptional Software" />
+  <meta property="og:description" content="Senior engineers who design, build, and operate the systems your mission depends on." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://irongridtechnologiesllc.com/" />
   <meta property="og:image" content="https://irongridtechnologiesllc.com/assets/logo-original.png" />
-  <meta name="theme-color" content="#04070b" />
+  <meta name="theme-color" content="#0a0a10" />
   <link rel="canonical" href="https://irongridtechnologiesllc.com/" />
-  <script>
-    (function () {
-      var t = localStorage.getItem("ig-theme");
-      if (t !== "light" && t !== "dark") {
-        t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      }
-      document.documentElement.dataset.theme = t;
-    })();
-  </script>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "IronGrid Technologies LLC",
-    "url": "https://irongridtechnologiesllc.com",
-    "logo": "https://irongridtechnologiesllc.com/assets/logo-original.png",
-    "email": "contact@irongridtechnologiesllc.com",
-    "description": "Web design and development for businesses of every kind: custom business websites, e-commerce and booking, redesigns, landing pages, SEO and performance, and ongoing care plans.",
-    "serviceType": ["Web Design", "Web Development", "E-Commerce Development", "Website Redesign", "SEO", "Website Maintenance"]
-  }
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"IronGrid Technologies LLC","url":"https://irongridtechnologiesllc.com","logo":"https://irongridtechnologiesllc.com/assets/logo-original.png","email":"contact@irongridtechnologiesllc.com","description":"Technology contracting agency: custom software development, web and mobile development, AI solutions, cloud engineering, DevOps, API development, enterprise software, IT consulting, and staff augmentation.","serviceType":["Custom Software Development","Web Development","AI Solutions","Mobile App Development","Cloud Engineering","DevOps","API Development","Enterprise Software","IT Consulting","Staff Augmentation"]}
   </script>
 </head>
-<body class="preloading">
-  <a class="skip-link" href="#top">Skip to content</a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ================= Preloader ================= -->
-  <div class="preloader" id="preloader">
-    <div class="pre-inner">
-      <div class="pre-mark" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-      </div>
-      <p class="pre-label">FORGING<span class="pre-count"><span id="preCount">0</span>%</span></p>
-    </div>
-  </div>
-
-  <!-- ================= Custom cursor ================= -->
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
-
-  <div class="grain" aria-hidden="true"></div>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-
-  <!-- ================= Header ================= -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="IronGrid Technologies — home">
-        <img class="brand-logo logo-on-dark" src="assets/logo-white.png" alt="IronGrid Technologies" />
-        <img class="brand-logo logo-on-light" src="assets/logo.png" alt="IronGrid Technologies" />
+  <header class="header" id="header">
+    <div class="wrap header-in">
+      <a class="brand" href="#main" aria-label="IronGrid Technologies — home">
+        <img src="assets/logo-white.png" alt="IronGrid Technologies" />
       </a>
-      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-        <a href="#work"><span data-n="01">Work</span></a>
-        <a href="#services"><span data-n="02">Services</span></a>
-        <a href="#approach"><span data-n="03">Process</span></a>
-        <a href="#models"><span data-n="04">Packages</span></a>
-        <a href="#faq"><span data-n="05">FAQ</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#stack">Stack</a>
+        <a href="#proof">Proof</a>
+        <a href="#process">Process</a>
+        <a href="#why">Why us</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme">
-          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v2.4m0 13.2V21m9-9h-2.4M5.4 12H3m15.4-6.4-1.7 1.7M7.3 16.7l-1.7 1.7m12.8 0-1.7-1.7M7.3 7.3 5.6 5.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 14.2A8.2 8.2 0 0 1 9.8 3.7a8.2 8.2 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        </button>
-        <a class="btn btn-primary btn-sm" data-magnetic href="#contact">Get a free quote</a>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
-          <span></span><span></span>
-        </button>
+      <div class="header-cta">
+        <a class="btn btn-solid btn-sm" href="#contact">Start a conversation</a>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <main id="top">
-    <!-- ================= Hero ================= -->
-    <section class="hero" id="hero">
-      <canvas id="forgeCanvas" aria-hidden="true"></canvas>
-      <canvas id="sparkCanvas" aria-hidden="true"></canvas>
-      <div class="hero-fade" aria-hidden="true"></div>
+  <main id="main">
 
-      <div class="container hero-inner">
-        <p class="badge" data-hero="1">
-          <span class="badge-dot" aria-hidden="true"></span>
-          Now booking new website projects
-        </p>
-
-        <h1 class="hero-title" aria-label="We build websites that work.">
-          <span class="line" data-split data-hero="2">WE BUILD</span>
-          <span class="line line-outline" data-split data-hero="3">WEBSITES</span>
-          <span class="line" data-split data-hero="4">THAT WORK<em class="line-dot">.</em></span>
-        </h1>
-
-        <p class="hero-for" data-hero="5">For <span class="flip"><span id="flipWord">any business.</span></span></p>
-
-        <div class="hero-row" data-hero="5">
-          <p class="lede">
-            IronGrid Technologies designs and builds fast, custom websites for
-            businesses of every kind — from local shops to growing companies.
-            This site? We built it. Yours is next.
+    <section class="hero">
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p class="tag" data-reveal><span class="tag-dot"></span>Independent software contracting studio</p>
+          <h1 data-reveal>We build <em>exceptional software</em> and digital experiences.</h1>
+          <p class="sub" data-reveal>
+            IronGrid is a technology contracting agency for startups, SMBs, enterprises,
+            and government teams — senior engineers who design, build, and operate the
+            systems your mission depends on.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" data-magnetic href="#contact">Get a free quote
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a class="btn btn-ghost btn-lg" data-magnetic href="#services">See what we do</a>
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn-solid" href="#contact">Start a conversation<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a class="btn btn-line" href="#services">Explore capabilities</a>
+          </div>
+          <dl class="stats" data-reveal>
+            <div><dt><span class="num" data-target="10">0</span>+</dt><dd>engineering disciplines</dd></div>
+            <div><dt><span class="num" data-target="100">0</span>%</dt><dd>senior engineers</dd></div>
+            <div><dt>&lt;<span class="num" data-target="24">0</span>h</dt><dd>response time</dd></div>
+            <div><dt><span class="num" data-target="30">0</span>-day</dt><dd>flexible terms</dd></div>
+          </dl>
+        </div>
+        <div class="hero-term" data-reveal aria-hidden="true">
+          <div class="term">
+            <div class="term-bar"><i></i><i></i><i></i><span>irongrid — zsh</span></div>
+            <pre class="term-body" id="termBody"></pre>
+          </div>
+          <div class="term-badge"><span class="ok">●</span> Deployed to production — zero downtime</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="sec">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Services</p>
+        <h2 data-reveal>Every discipline a serious<br />software project needs.</h2>
+        <p class="lead" data-reveal>One partner from architecture to operations — no hand-offs between vendors, no gaps in accountability.</p>
+        <div class="svc-grid">
+          <article class="svc" data-reveal><h3>Custom Software Development</h3><p>Purpose-built systems engineered around your workflows — not licenses bent until they almost fit.</p></article>
+          <article class="svc" data-reveal><h3>Web Development</h3><p>Fast, accessible web applications and sites with the polish your brand deserves.</p></article>
+          <article class="svc" data-reveal><h3>AI Solutions</h3><p>LLM integrations, retrieval pipelines, and automation that survive contact with production.</p></article>
+          <article class="svc" data-reveal><h3>Mobile App Development</h3><p>Native and cross-platform apps that feel native everywhere they run.</p></article>
+          <article class="svc" data-reveal><h3>Cloud Engineering</h3><p>Architecture, migrations, and infrastructure-as-code across AWS, Azure, and GCP.</p></article>
+          <article class="svc" data-reveal><h3>DevOps</h3><p>CI/CD, containers, and observability — paved roads so your team ships without fear.</p></article>
+          <article class="svc" data-reveal><h3>API Development</h3><p>Clean, documented, versioned APIs your partners will actually enjoy integrating.</p></article>
+          <article class="svc" data-reveal><h3>Enterprise Software</h3><p>Systems built for compliance, scale, and the decade after launch.</p></article>
+          <article class="svc" data-reveal><h3>IT Consulting</h3><p>Architecture reviews, technology selection, and diligence when a guess is too expensive.</p></article>
+          <article class="svc" data-reveal><h3>Staff Augmentation</h3><p>Vetted senior contractors embedded in your team, your process, your standup.</p></article>
+        </div>
+        <p class="sec-cta" data-reveal><a href="#contact">Scope your project in a free call →</a></p>
+      </div>
+    </section>
+
+    <section id="stack" class="sec sec-tint">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Technology stack</p>
+        <h2 data-reveal>Modern tools, chosen deliberately.</h2>
+        <p class="lead" data-reveal>We standardize on boring-in-a-good-way technology: mature, documented, and hireable-for later.</p>
+        <div class="stack-grid" data-reveal>
+          <div class="stack-col"><h3>Frontend</h3><ul><li>TypeScript</li><li>React</li><li>Next.js</li><li>Vue</li></ul></div>
+          <div class="stack-col"><h3>Backend</h3><ul><li>Node.js</li><li>Python</li><li>Go</li><li>.NET</li><li>Java</li></ul></div>
+          <div class="stack-col"><h3>AI &amp; Data</h3><ul><li>Claude &amp; OpenAI APIs</li><li>PyTorch</li><li>PostgreSQL</li><li>Redis</li></ul></div>
+          <div class="stack-col"><h3>Cloud</h3><ul><li>AWS</li><li>Azure</li><li>Google Cloud</li><li>Cloudflare</li></ul></div>
+          <div class="stack-col"><h3>DevOps</h3><ul><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>GitHub Actions</li></ul></div>
+          <div class="stack-col"><h3>Mobile</h3><ul><li>Swift</li><li>Kotlin</li><li>React Native</li><li>Flutter</li></ul></div>
+        </div>
+        <div class="code-card" data-reveal aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>engagement.ts</span></div>
+<pre class="code"><span class="c">// Every engagement starts with a contract — in code, too.</span>
+<span class="k">export interface</span> <span class="t">Engagement</span> {
+  scope: <span class="t">WrittenSOW</span>;          <span class="c">// fixed, signed, no surprises</span>
+  team: <span class="t">SeniorEngineer</span>[];     <span class="c">// the people you interviewed</span>
+  cadence: <span class="s">"weekly-demos"</span>;
+  ownership: <span class="s">"yours"</span>;         <span class="c">// code, infra, credentials</span>
+  exit: <span class="s">"30-day"</span>;             <span class="c">// leaving should be easy</span>
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="sec">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Proof of work</p>
+        <h2 data-reveal>Audit us before you hire us.</h2>
+        <p class="lead" data-reveal>We're a young studio, and we won't decorate this page with borrowed logos or invented case studies. What we will do is hand you the evidence.</p>
+        <div class="proof-grid">
+          <div class="proof-card" data-reveal>
+            <p class="proof-tag">Live case study</p>
+            <h3>The site you're reading.</h3>
+            <p>Interactive canvas background, scroll choreography, and a complete design system — in a few hundred kilobytes of hand-written code. Zero frameworks, zero trackers, self-hosted fonts. Open your dev tools and inspect it: that's the audit we invite on every system we ship.</p>
+            <ul class="proof-stats" role="list">
+              <li><strong>0</strong><span>frameworks or trackers</span></li>
+              <li><strong>100%</strong><span>hand-written code</span></li>
+              <li><strong>A+</strong><span>view-source friendly</span></li>
+            </ul>
+          </div>
+          <div class="proof-card proof-next" data-reveal>
+            <p class="proof-tag">Your project</p>
+            <h3>This slot is reserved.</h3>
+            <p>Early partners get senior attention that established agencies reserve for their largest accounts — and a launch case study written around your results, with your approval, when the work earns it.</p>
+            <a class="btn btn-line" href="#contact">Claim the slot</a>
           </div>
         </div>
-
-        <dl class="hero-stats" data-hero="6">
-          <div><dt><span class="num" data-target="100">0</span>%</dt><dd>custom-designed, no templates</dd></div>
-          <div><dt>&lt;<span class="num" data-target="24">0</span>h</dt><dd>first response</dd></div>
-          <div><dt><span class="num" data-target="1">0</span></dt><dd>flat quote before we start</dd></div>
-          <div><dt><span class="num" data-target="0">0</span></dt><dd>hidden fees, ever</dd></div>
-        </dl>
       </div>
-
-      <a class="scroll-cue" href="#services" data-hero="7" aria-label="Scroll to services">
-        <span>SCROLL</span><i aria-hidden="true"></i>
-      </a>
     </section>
 
-    <!-- ================= Marquee ================= -->
-    <div class="marquee" id="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Restaurants</span><i>◆</i>
-        <span>Law Firms</span><i>◆</i>
-        <span>Contractors</span><i>◆</i>
-        <span>Clinics</span><i>◆</i>
-        <span>Salons</span><i>◆</i>
-        <span>Real Estate</span><i>◆</i>
-        <span>Fitness Studios</span><i>◆</i>
-        <span>Auto Shops</span><i>◆</i>
-        <span>Nonprofits</span><i>◆</i>
-        <span>Startups</span><i>◆</i>
-        <span>Restaurants</span><i>◆</i>
-        <span>Law Firms</span><i>◆</i>
-        <span>Contractors</span><i>◆</i>
-        <span>Clinics</span><i>◆</i>
-        <span>Salons</span><i>◆</i>
-        <span>Real Estate</span><i>◆</i>
-        <span>Fitness Studios</span><i>◆</i>
-        <span>Auto Shops</span><i>◆</i>
-        <span>Nonprofits</span><i>◆</i>
-        <span>Startups</span><i>◆</i>
-      </div>
-    </div>
-
-    <!-- ================= Work ================= -->
-    <section id="work" class="section">
-      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">01</span>
-      <div class="container">
-        <p class="eyebrow" data-reveal><span>01</span> Work</p>
-        <h2 data-reveal>Proof, not promises.</h2>
-        <p class="section-lede" data-reveal>
-          We're a new studio, so we won't show you a wall of borrowed logos or
-          staged screenshots. Everything we've shipped is live on the open
-          internet — click through, poke around, and judge for yourself.
-        </p>
-
-        <div class="project-list">
-          <article class="project project-live" data-reveal>
-            <a class="live-card" href="https://moviphone.netlify.app/" target="_blank" rel="noopener">
-              <span class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>moviphone.netlify.app</span></span>
-              <span class="live-body" aria-hidden="true">
-                <span class="live-name">MOVI Phone</span>
-                <span class="live-visit">Visit the live site
-                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-              </span>
-              <span class="mock-tag">Live</span>
-            </a>
-            <div class="project-info">
-              <p class="project-ind">Consumer tech &amp; e-commerce</p>
-              <h3>MOVI Phone</h3>
-              <p class="project-brief">A full product site for the MOVI — an Android smartphone with a built-in laser projector, shown at CES. Hero video, spec sheets, press and reviews, ordering, and every support and policy page a real product needs.</p>
-              <ul class="project-points">
-                <li><strong>Why it's here</strong> This isn't a one-page brochure — it's a fifteen-page product site that has to sell, spec, and support a $699 device without losing the customer along the way.</li>
-                <li><strong>What it shows</strong> We can carry a brand through an entire buying journey — from the first scroll on the homepage to specifications, warranty, and checkout — with the same polish on every page.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project project-live" data-reveal>
-            <a class="live-card" href="https://mohammednalam.com/" target="_blank" rel="noopener">
-              <span class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>mohammednalam.com</span></span>
-              <span class="live-body" aria-hidden="true">
-                <span class="live-name">mohammednalam.com</span>
-                <span class="live-visit">Visit the live site
-                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-              </span>
-              <span class="mock-tag">Live</span>
-            </a>
-            <div class="project-info">
-              <p class="project-ind">Personal brand</p>
-              <h3>Mohammed N. Alam</h3>
-              <p class="project-brief">The personal site of IronGrid's founder — designed and built the same way we build for clients, and live for anyone to inspect.</p>
-              <ul class="project-points">
-                <li><strong>Why it's here</strong> A portfolio you can't click isn't proof. This one is live: open it on your phone, click around, run Lighthouse on it.</li>
-                <li><strong>What it shows</strong> The standard every IronGrid project gets — clean design, fast loads, and details that hold up under inspection.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project project-live" data-reveal>
-            <a class="live-card" href="https://aysenuralam.com/" target="_blank" rel="noopener">
-              <span class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>aysenuralam.com</span></span>
-              <span class="live-body" aria-hidden="true">
-                <span class="live-name">Aysenur Alam</span>
-                <span class="live-visit">Visit the live site
-                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-              </span>
-              <span class="mock-tag">Live</span>
-            </a>
-            <div class="project-info">
-              <p class="project-ind">Creative services</p>
-              <h3>Aysenur Alam</h3>
-              <p class="project-brief">The site of a San Diego brand creative strategist — a warm, editorial one-pager that turns her eye for aesthetics into a pitch: services, before-and-after portfolio, her story, and a direct line to work with her.</p>
-              <ul class="project-points">
-                <li><strong>Why it's here</strong> Her whole business is visual taste, so the site has to prove hers — soft serif typography and a warm palette that feel nothing like a corporate site, because her clients aren't corporate.</li>
-                <li><strong>What it shows</strong> Range with the same engineering underneath: fast, mobile-first, and built around the one thing every visitor should do — get in touch.</li>
-              </ul>
-            </div>
-          </article>
+    <section class="sec sec-tint" id="industries">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Industries served</p>
+        <h2 data-reveal>Built for teams with real stakes.</h2>
+        <div class="ind-grid">
+          <div class="ind" data-reveal><h3>Startups &amp; scaleups</h3><p>Ship the v1 fast — without the rewrite two years later.</p></div>
+          <div class="ind" data-reveal><h3>Small &amp; mid-size business</h3><p>Enterprise-grade engineering at a size that fits.</p></div>
+          <div class="ind" data-reveal><h3>Enterprise</h3><p>Integration-heavy builds that respect your security review.</p></div>
+          <div class="ind" data-reveal><h3>Government contractors</h3><p>Documented, auditable delivery under real compliance constraints.</p></div>
+          <div class="ind" data-reveal><h3>E-commerce &amp; retail</h3><p>Storefronts and integrations where every 100ms is revenue.</p></div>
+          <div class="ind" data-reveal><h3>Long-term partners</h3><p>Retained engineering for organizations without a full-time team.</p></div>
         </div>
-
-        <aside class="case-real" data-reveal>
-          <p class="case-real-tag">The flagship case study</p>
-          <h3>The site you're reading right now.</h3>
-          <p>Real-time WebGL, custom typography, dark and light themes, and a full animation system — delivered in <strong>under 200&nbsp;KB</strong>, lighter than a single stock photo. Zero frameworks, zero trackers, self-hosted fonts, hand-written code. Open your dev tools and check — that's the audit we invite on every site we ship.</p>
-          <ul class="case-real-stats" role="list">
-            <li><strong>&lt;200 KB</strong><span>total first load</span></li>
-            <li><strong>0</strong><span>frameworks or trackers</span></li>
-            <li><strong>100%</strong><span>hand-written code</span></li>
-          </ul>
-          <p class="next-cta"><a href="#contact">Want yours built the same way? Get a free quote<span aria-hidden="true"> →</span></a></p>
-        </aside>
       </div>
     </section>
 
-    <!-- ================= Services ================= -->
-    <section id="services" class="section section-alt">
-      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">02</span>
-      <div class="container">
-        <p class="eyebrow" data-reveal><span>02</span> Services</p>
-        <h2 data-reveal>Everything your business<br />needs to win online.</h2>
-        <p class="section-lede" data-reveal>
-          From a single landing page to a full online store — designed, built,
-          and launched by senior engineers, not a template mill.
-        </p>
-        <div class="card-grid">
-          <article class="card" data-tilt data-reveal>
-            <div class="card-glare" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Business Websites</h3>
-            <p>Custom marketing sites that make your business look as good as it is — clear pages, strong calls to action, and easy for customers to use.</p>
-            <ul class="card-tags"><li>Custom design</li><li>Mobile-first</li><li>Easy updates</li></ul>
-          </article>
-          <article class="card" data-tilt data-reveal>
-            <div class="card-glare" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 5h2l2.1 10.4a1 1 0 0 0 1 .8h7.8a1 1 0 0 0 1-.8L20 8.2H7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-            </div>
-            <h3>E-Commerce &amp; Booking</h3>
-            <p>Online stores and booking flows that turn visitors into customers — products, payments, scheduling, gift cards, the works.</p>
-            <ul class="card-tags"><li>Stripe</li><li>Shopify</li><li>Carts</li><li>Scheduling</li></ul>
-          </article>
-          <article class="card" data-tilt data-reveal>
-            <div class="card-glare" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M20.4 12a8.4 8.4 0 1 1-2.5-6M20.4 3.6v4.8h-4.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Redesigns &amp; Rescues</h3>
-            <p>Outdated, slow, or broken site? We modernize the design, migrate your content, and make sure your Google ranking survives the move.</p>
-            <ul class="card-tags"><li>Refresh</li><li>Migrate</li><li>Modernize</li></ul>
-          </article>
-          <article class="card" data-tilt data-reveal>
-            <div class="card-glare" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M13 2.5 4.5 14H10l-1 7.5L17.5 10H12l1-7.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Landing Pages &amp; Campaigns</h3>
-            <p>High-converting single pages for launches, ads, events, and promotions — built fast and measured properly, so you know what's working.</p>
-            <ul class="card-tags"><li>Fast turnaround</li><li>Analytics</li><li>Conversion</li></ul>
-          </article>
-          <article class="card" data-tilt data-reveal>
-            <div class="card-glare" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m20.5 20.5-4.8-4.8M8.5 11h5M11 8.5v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-            </div>
-            <h3>SEO &amp; Performance</h3>
-            <p>Speed, structure, and local-search fundamentals baked into every build — so customers actually find you, and the site loads before they blink.</p>
-            <ul class="card-tags"><li>Core Web Vitals</li><li>Local SEO</li><li>Google Business</li></ul>
-          </article>
-          <article class="card" data-tilt data-reveal>
-            <div class="card-glare" aria-hidden="true"></div>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6.5v5c0 4.5 3.2 7.6 7.5 9.5 4.3-1.9 7.5-5 7.5-9.5v-5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Care Plans</h3>
-            <p>After launch we keep it running — updates, content edits, backups, security, and a real human who answers when you email.</p>
-            <ul class="card-tags"><li>Hosting</li><li>Updates</li><li>Support</li></ul>
-          </article>
+    <section id="process" class="sec">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Development process</p>
+        <h2 data-reveal>A pipeline, not a mystery.</h2>
+        <p class="lead" data-reveal>Six stages, each with a named owner and a visible artifact. You always know where your project is.</p>
+        <div class="pipe" data-reveal aria-hidden="true">
+          <svg viewBox="0 0 1120 80" preserveAspectRatio="xMidYMid meet">
+            <line class="pipe-rail" x1="40" y1="40" x2="1080" y2="40"/>
+            <line class="pipe-flow" x1="40" y1="40" x2="1080" y2="40"/>
+            <g class="pipe-nodes">
+              <circle cx="40" cy="40" r="7"/><circle cx="248" cy="40" r="7"/><circle cx="456" cy="40" r="7"/>
+              <circle cx="664" cy="40" r="7"/><circle cx="872" cy="40" r="7"/><circle cx="1080" cy="40" r="7"/>
+            </g>
+          </svg>
         </div>
-        <p class="next-cta" data-reveal><a href="#contact">Not sure which you need? Ask us — it's free<span aria-hidden="true"> →</span></a></p>
-      </div>
-    </section>
-
-    <!-- ================= Approach ================= -->
-    <section id="approach" class="section">
-      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">03</span>
-      <div class="container">
-        <p class="eyebrow" data-reveal><span>03</span> Process</p>
-        <h2 data-reveal>From first call to launch day.</h2>
-        <p class="section-lede" data-reveal>
-          You don't need to speak tech — that's our job. A clear four-step
-          process takes you from idea to a live website, with no surprises.
-        </p>
-        <ol class="timeline" id="timeline">
-          <li class="timeline-step" data-reveal>
-            <span class="step-num">01</span>
-            <div>
-              <h3>Discover</h3>
-              <p>A short call about your business, your customers, and what you need the site to do. You get a flat written quote with a timeline — not a vague estimate, and never an hourly meter.</p>
-            </div>
-          </li>
-          <li class="timeline-step" data-reveal>
-            <span class="step-num">02</span>
-            <div>
-              <h3>Design</h3>
-              <p>You see real designs of your actual site — homepage first — and we revise until you love it. Nothing gets built until you've approved how it looks.</p>
-            </div>
-          </li>
-          <li class="timeline-step" data-reveal>
-            <span class="step-num">03</span>
-            <div>
-              <h3>Build</h3>
-              <p>We build it fast, mobile-friendly, and search-ready, and you watch progress on a live preview link the whole way. Questions answered in plain English, same day.</p>
-            </div>
-          </li>
-          <li class="timeline-step" data-reveal>
-            <span class="step-num">04</span>
-            <div>
-              <h3>Launch</h3>
-              <p>We handle the domain, hosting, email, and analytics, then hand you the keys with a walkthrough. Want us to keep maintaining it? Care plans are available — but never required.</p>
-            </div>
-          </li>
+        <ol class="stages">
+          <li data-reveal><h3><span>01</span>Discover</h3><p>Goals, constraints, and what "done" means — captured in a written scope with a flat price.</p></li>
+          <li data-reveal><h3><span>02</span>Architect</h3><p>System design reviewed with you before a line of code — diagrams you can challenge.</p></li>
+          <li data-reveal><h3><span>03</span>Build</h3><p>Weekly demos of running software in your repos, your tracker, your process.</p></li>
+          <li data-reveal><h3><span>04</span>Test</h3><p>Automated suites and review gates on every merge — quality is a pipeline stage, not a phase.</p></li>
+          <li data-reveal><h3><span>05</span>Deploy</h3><p>CI/CD to your infrastructure with rollback plans rehearsed before they're needed.</p></li>
+          <li data-reveal><h3><span>06</span>Operate</h3><p>Monitoring, documentation, and a real handoff — retainers optional, never required.</p></li>
         </ol>
-        <p class="next-cta" data-reveal><a href="#contact">Step one is a free conversation. Start it<span aria-hidden="true"> →</span></a></p>
+        <p class="sec-cta" data-reveal><a href="#contact">Stage one is a free call. Book it →</a></p>
       </div>
     </section>
 
-    <!-- ================= Engagement models ================= -->
-    <section id="models" class="section section-alt">
-      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">04</span>
-      <div class="container">
-        <p class="eyebrow" data-reveal><span>04</span> Packages</p>
-        <h2 data-reveal>Pick the size that fits.</h2>
-        <p class="section-lede" data-reveal>
-          Every project gets a flat, written quote before we start. No hourly
-          meters, no hidden fees — and every package is 100% custom-designed.
-        </p>
-        <div class="model-grid">
-          <article class="model" data-reveal>
-            <h3>Launch Page</h3>
-            <p class="model-tag">One page · fast turnaround</p>
-            <p>A sharp single-page site with everything that matters: who you are, what you do, and how to reach you. The fastest way to look legitimate online.</p>
-            <ul>
-              <li>Custom one-page design</li>
-              <li>Mobile-first and lightning fast</li>
-              <li>Contact form, map &amp; social links</li>
-            </ul>
-            <p class="model-fit">Best for: new businesses and quick launches</p>
-          </article>
-          <article class="model model-featured" data-reveal>
-            <p class="model-flag">Most popular</p>
-            <h3>Business Website</h3>
-            <p class="model-tag">Multi-page · custom design</p>
-            <p>A full custom site for your business — home, services, about, gallery, contact, and more — designed to win trust and show up on Google.</p>
-            <ul>
-              <li>5–10 custom-designed pages</li>
-              <li>SEO &amp; analytics baked in</li>
-              <li>Easy content updates after launch</li>
-            </ul>
-            <p class="model-fit">Best for: established businesses ready to grow</p>
-          </article>
-          <article class="model" data-reveal>
-            <h3>Store &amp; Custom</h3>
-            <p class="model-tag">E-commerce · custom features</p>
-            <p>Sell products, take bookings, or add custom features — quote calculators, client portals, integrations — on top of a rock-solid site.</p>
-            <ul>
-              <li>Products, payments &amp; shipping</li>
-              <li>Booking &amp; scheduling flows</li>
-              <li>Custom features on request</li>
-            </ul>
-            <p class="model-fit">Best for: selling online or unusual needs</p>
-          </article>
+    <section id="why" class="sec sec-tint">
+      <div class="wrap why-in">
+        <div>
+          <p class="kicker" data-reveal>Why choose us</p>
+          <h2 data-reveal>Trust is engineered,<br />not promised.</h2>
+          <ul class="why-list">
+            <li data-reveal><h3>You own everything</h3><p>Code, infrastructure, and credentials live in your accounts from day one. Leaving us should always be easy — that's why partners stay.</p></li>
+            <li data-reveal><h3>Senior only</h3><p>No one learns on your budget. Every engineer has shipped and operated production systems.</p></li>
+            <li data-reveal><h3>Fixed, transparent pricing</h3><p>A written quote before we start. Scope changes are re-priced in writing — never discovered on an invoice.</p></li>
+            <li data-reveal><h3>Radical visibility</h3><p>Weekly demos and status reports that include the bad news. You'll never wonder what you're paying for.</p></li>
+          </ul>
         </div>
-        <p class="next-cta" data-reveal><a href="#contact">Get a flat quote for your project<span aria-hidden="true"> →</span></a></p>
+        <figure class="graph-card" data-reveal>
+          <div class="term-bar"><i></i><i></i><i></i><span>consistency, visualized</span></div>
+          <div class="graph" id="gitGraph" aria-hidden="true"></div>
+          <figcaption>Steady, reviewable progress — not heroics before deadlines.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ================= Principles ================= -->
-    <section id="principles" class="section">
-      <span class="ghost-num" data-parallax="0.4" aria-hidden="true">05</span>
-      <div class="container">
-        <p class="eyebrow" data-reveal><span>05</span> Principles</p>
-        <h2 data-reveal>What we refuse to<br />compromise on.</h2>
-        <div class="prow-list">
-          <button class="prow" aria-expanded="false" data-reveal>
-            <span class="prow-num" aria-hidden="true">01</span>
-            <span class="prow-body">
-              <span class="prow-title">You own everything.</span>
-              <span class="prow-desc"><span>Your domain, your hosting, your content, your code — all in accounts you control. If you ever leave, everything comes with you. No hostage-taking.</span></span>
-            </span>
-            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="prow" aria-expanded="false" data-reveal>
-            <span class="prow-num" aria-hidden="true">02</span>
-            <span class="prow-body">
-              <span class="prow-title">Fast or it's broken.</span>
-              <span class="prow-desc"><span>Slow sites lose customers. We build to strict performance budgets so your site loads instantly — even on a phone in a parking lot.</span></span>
-            </span>
-            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="prow" aria-expanded="false" data-reveal>
-            <span class="prow-num" aria-hidden="true">03</span>
-            <span class="prow-body">
-              <span class="prow-title">No template mills.</span>
-              <span class="prow-desc"><span>Your business isn't a template, so your website shouldn't be one. Every site is designed from scratch around your customers — like the one you're looking at.</span></span>
-            </span>
-            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="prow" aria-expanded="false" data-reveal>
-            <span class="prow-num" aria-hidden="true">04</span>
-            <span class="prow-body">
-              <span class="prow-title">Plain English, always.</span>
-              <span class="prow-desc"><span>No jargon, no upsells, no mystery invoices. You'll always know what we're doing, why we're doing it, and exactly what it costs.</span></span>
-            </span>
-            <svg class="prow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+    <section class="sec" id="commitments">
+      <div class="wrap">
+        <p class="kicker" data-reveal>What partners can expect</p>
+        <h2 data-reveal>We're new. So we put it in writing.</h2>
+        <p class="lead" data-reveal>A young studio doesn't get to lean on a testimonial wall — so every engagement carries these commitments in the contract itself.</p>
+        <div class="quote-grid">
+          <blockquote class="quote" data-reveal><p>"You'll see working software every week, and honest status even when it's not flattering."</p><footer>— Written into every SOW</footer></blockquote>
+          <blockquote class="quote" data-reveal><p>"Your first response will come within one business day. Always from an engineer, never from a queue."</p><footer>— Written into every SOW</footer></blockquote>
+          <blockquote class="quote" data-reveal><p>"If we're not the right fit for the job, we'll tell you on the first call — and point you somewhere better."</p><footer>— How we run the first call</footer></blockquote>
+        </div>
+        <div class="timeline" data-reveal>
+          <div class="tl-item"><span>2026</span><p>IronGrid Technologies founded</p></div>
+          <div class="tl-item"><span>2026</span><p>First builds shipped and operating</p></div>
+          <div class="tl-item now"><span>Now</span><p>Booking new engagements</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ================= FAQ ================= -->
-    <section id="faq" class="section section-alt">
-      <span class="ghost-num" data-parallax="0.5" aria-hidden="true">06</span>
-      <div class="container narrow">
-        <p class="eyebrow" data-reveal><span>06</span> FAQ</p>
-        <h2 data-reveal>Questions, answered straight.</h2>
-        <div class="faq-list">
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              How long does a website take?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>A launch page can go live in about a week. Most business websites take two to four weeks from kickoff to launch, depending on the number of pages and how quickly content comes together. Stores and custom builds vary — your quote always includes a timeline.</p></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              How much does a website cost?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>It depends on the size and features, which is why every project gets a flat written quote before anything starts — no hourly billing, no surprise line items. Tell us what you need and you'll have a real number within a business day, free, with zero obligation.</p></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              Do I need to write the content myself?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>No. Bring what you have — even if that's just a logo and a phone number — and we'll help shape the words, structure the pages, and source imagery. You review and approve everything before it goes live.</p></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              What about domains, hosting, and email?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>We set all of it up — domain, hosting, business email, analytics — in accounts that belong to you, and connect everything so it just works. If you're on a care plan we manage it day to day; either way, you hold the keys.</p></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              Can you fix or redesign my current site?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>Yes — redesigns are a big part of what we do. We keep what's working, fix what isn't, migrate your content, and make sure your Google ranking survives the move. If your current site just needs small fixes rather than a rebuild, we'll tell you that honestly.</p></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              What happens after launch?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>The site is yours. Many clients add a care plan — updates, content edits, backups, security, and a real human answering support emails. Others take the launch walkthrough and run it themselves. Both are completely fine, and you can switch anytime.</p></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              Do you have client references?
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </button>
-            <div class="faq-a"><div><p>We're a new studio, so instead of a testimonial wall we show working proof: the site you're on and our live work above — real, public, and inspectable. You'll see real designs of your actual site before you commit a dollar, so the only thing you're trusting up front is a free conversation.</p></div></div>
-          </div>
+    <section id="faq" class="sec sec-tint">
+      <div class="wrap narrow">
+        <p class="kicker" data-reveal>FAQ</p>
+        <h2 data-reveal>Straight answers.</h2>
+        <div class="faq" data-reveal>
+          <details><summary>How fast can you start?<span aria-hidden="true">+</span></summary><p>Discovery calls happen within days of your first email; most engagements begin within one to three weeks. If your date is hard, say so — we'll tell you honestly whether we can hit it.</p></details>
+          <details><summary>How do engagements work?<span aria-hidden="true">+</span></summary><p>Fixed-price projects against a written scope, monthly staff augmentation per engineer, or a retained partnership with reserved capacity. All under a short MSA with 30-day exit terms on ongoing work.</p></details>
+          <details><summary>What do you charge?<span aria-hidden="true">+</span></summary><p>Every project gets a flat written quote before anything starts — no hourly meters, no hidden fees. Tell us what you need and you'll have a real number within a business day.</p></details>
+          <details><summary>Can you work with our existing team and codebase?<span aria-hidden="true">+</span></summary><p>Yes — embedding in existing teams and rescuing existing systems is half our work. Your repos, your tracker, your standup.</p></details>
+          <details><summary>Do you have client references?<span aria-hidden="true">+</span></summary><p>We're a new studio, so we show working proof instead: this site and the commitments we sign. You'll see real output before you commit a dollar — the only thing you're trusting up front is a free call.</p></details>
         </div>
       </div>
     </section>
 
-    <!-- ================= CTA ================= -->
-    <section id="contact" class="section section-cta">
-      <span class="ghost-word" data-parallax="0.25" aria-hidden="true">CONTACT</span>
-      <div class="cta-grid-bg" aria-hidden="true"></div>
-      <div class="container center">
-        <h2 class="cta-title" data-reveal>Your business deserves<br /><em>a better website.</em></h2>
-        <p class="section-lede center-lede" data-reveal>
-          Tell us about your business and what you need. You'll get a straight
-          answer and a flat quote — free, within one business day.
-        </p>
-        <div class="cta-actions" data-reveal>
-          <form class="quote-form" id="quoteForm">
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="qf-name">Name</label>
-                <input id="qf-name" name="name" type="text" autocomplete="name" required placeholder="Jane Smith" />
-              </div>
-              <div class="form-field">
-                <label for="qf-email">Email</label>
-                <input id="qf-email" name="email" type="email" autocomplete="email" required placeholder="jane@yourbusiness.com" />
-              </div>
-              <div class="form-field">
-                <label for="qf-phone">Phone <span>(optional)</span></label>
-                <input id="qf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567" />
-              </div>
-              <div class="form-field">
-                <label for="qf-business">Business <span>(optional)</span></label>
-                <input id="qf-business" name="business" type="text" autocomplete="organization" placeholder="Smith &amp; Co." />
-              </div>
-              <div class="form-field form-field-full">
-                <label for="qf-message">What do you need?</label>
-                <textarea id="qf-message" name="message" rows="5" required placeholder="Tell us about your business and what you'd like the site to do."></textarea>
-              </div>
-            </div>
-            <div class="form-footer">
-              <button class="mega-btn form-submit" type="submit" data-magnetic>
-                <span class="mega-fill" aria-hidden="true"></span>
-                <span class="mega-text"><span id="submitLabel">Get your free quote</span>
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-              </button>
-              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-            </div>
-          </form>
-          <p class="cta-email">
-            Prefer email? <a href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a>
-          </p>
-          <p class="cta-note">Prefer a call? Send us two times that work and we'll send an invite.</p>
+    <section id="contact" class="cta">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="wrap cta-in">
+        <h2 data-reveal>Let's build what's next.</h2>
+        <p data-reveal>Tell us about the system you need — you'll get a straight answer and a flat quote within one business day.</p>
+        <div data-reveal>
+          <a class="btn btn-solid btn-lg" href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <p class="cta-note">Prefer a call? Email two times that work and we'll send an invite.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ================= Footer ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-word" aria-hidden="true">IRONGRID</p>
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img class="logo-on-dark" src="assets/logo-white.png" alt="IronGrid Technologies" />
-          <img class="logo-on-light" src="assets/logo.png" alt="IronGrid Technologies" />
-          <p>Websites forged for any business.<br />Fast, custom, and completely yours.</p>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <img src="assets/logo-white.png" alt="IronGrid Technologies" />
+          <p>Senior contract engineering for startups, enterprises, and government teams.</p>
         </div>
-        <nav class="footer-cols" aria-label="Footer navigation">
-          <div>
-            <h4>Services</h4>
-            <a href="#services">Business Websites</a>
-            <a href="#services">E-Commerce &amp; Booking</a>
-            <a href="#services">Redesigns &amp; Rescues</a>
-            <a href="#services">SEO &amp; Performance</a>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <a href="#approach">Process</a>
-            <a href="#models">Packages</a>
-            <a href="#principles">Principles</a>
-            <a href="#faq">FAQ</a>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <a href="mailto:contact@irongridtechnologiesllc.com">contact@<wbr />irongridtechnologiesllc.com</a>
-            <a href="#contact">Get a free quote</a>
-          </div>
+        <nav class="foot-cols" aria-label="Footer">
+          <div><h4>Services</h4><a href="#services">Custom software</a><a href="#services">AI solutions</a><a href="#services">Cloud &amp; DevOps</a><a href="#services">Staff augmentation</a></div>
+          <div><h4>Company</h4><a href="#proof">Proof</a><a href="#process">Process</a><a href="#why">Why us</a><a href="#faq">FAQ</a></div>
+          <div><h4>Contact</h4><a href="mailto:contact@irongridtechnologiesllc.com">contact@irongridtechnologiesllc.com</a><a href="#contact">Start a conversation</a></div>
         </nav>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="year">2026</span> IronGrid Technologies LLC. All rights reserved.</p>
-        <p class="footer-tag">Built on the grid.</p>
-      </div>
+      <div class="foot-bottom"><p>© <span id="year">2026</span> IronGrid Technologies LLC. All rights reserved.</p><p class="foot-tag">Engineered, not assembled.</p></div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
