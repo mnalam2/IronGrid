@@ -1609,6 +1609,35 @@ body.loaded .hero-title .char { transform: none; }
    Work: concept mockups + project layout
    ============================================================ */
 
+.examples-intro { margin-bottom: 3rem; }
+
+.examples-label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ember);
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.examples-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--line-strong), transparent);
+}
+
+.examples-note {
+  color: var(--muted);
+  max-width: 640px;
+  font-size: 1.05rem;
+  text-wrap: pretty;
+}
+
 .project-list { display: grid; gap: 4.5rem; margin-bottom: 4rem; }
 
 .project {
