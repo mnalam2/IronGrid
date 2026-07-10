@@ -1521,6 +1521,7 @@ body.loaded .hero-title .char { transform: none; }
 
   .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
+  .footer-cols div:has(a[href^="mailto"]) { grid-column: 1 / -1; }
 
   .scroll-cue { display: none; }
 }
