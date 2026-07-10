@@ -1678,6 +1678,16 @@ body.loaded .hero-title .char { transform: none; }
 
 .live-card:hover .live-visit svg { transform: translate(3px, -3px); }
 
+.live-credit {
+  margin-top: 0.2rem;
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .mock-bar {
   display: flex;
   align-items: center;
