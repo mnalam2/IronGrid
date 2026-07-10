@@ -1522,6 +1522,9 @@ body.loaded .hero-title .char { transform: none; }
   .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
   .footer-cols div:has(a[href^="mailto"]) { grid-column: 1 / -1; }
+  /* The outline watermark shrinks to logo size on phones and reads as
+     a duplicate of the brand mark right below it */
+  .footer-word { display: none; }
 
   .scroll-cue { display: none; }
 }
